@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Linux目录结构 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Linux目录结构 基本介绍1）linux 的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“&#x2F;”，然后在此目录下再创建其它的目录。2)深刻理解linux树状文件目录是非常重要的。3）记住经典的一句话；在linux世界中，一切皆文件4）示意图   2.具体的目录结构1）&#x2F;bin  【常用】   （&#x2F;usr&#x2F;bin 、&#x2F;usr&amp;#x2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux目录结构">
+<meta property="og:url" content="http://example.com/2024/01/08/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Linux目录结构 基本介绍1）linux 的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“&#x2F;”，然后在此目录下再创建其它的目录。2)深刻理解linux树状文件目录是非常重要的。3）记住经典的一句话；在linux世界中，一切皆文件4）示意图   2.具体的目录结构1）&#x2F;bin  【常用】   （&#x2F;usr&#x2F;bin 、&#x2F;usr&amp;#x2">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401081716034.png">
+<meta property="article:published_time" content="2024-01-08T09:09:38.000Z">
+<meta property="article:modified_time" content="2024-01-08T09:17:06.769Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401081716034.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Linux目录结构" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/01/08/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/" class="article-date">
+  <time class="dt-published" datetime="2024-01-08T09:09:38.000Z" itemprop="datePublished">2024-01-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Linux目录结构
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Linux目录结构</p>
+<p>基本介绍<br>1）linux 的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“&#x2F;”，然后在此目录下再创建其它的目录。<br>2)深刻理解linux树状文件目录是非常重要的。<br>3）记住经典的一句话；在linux世界中，一切皆文件<br>4）示意图</p>
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401081716034.png" alt="image-20240108171650576"></p>
+<ol>
+<li>2.具体的目录结构<br>1）&#x2F;bin  【常用】   （&#x2F;usr&#x2F;bin 、&#x2F;usr&#x2F;local&#x2F;bin）是Binary的缩小写，这个目录存放着经常使用的命令<br>2）&#x2F;sbin  (&#x2F;usr&#x2F;sbin、&#x2F;usr&#x2F;local&#x2F;sbin）s就是Super User的意思，这里存放的是系统管理员使用的系统管理程序。<br>3）&#x2F;home【常用】  存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一般该目录名是以用户的账号命名。<br>4）&#x2F;root 【常用】 该目录为系统管理员，也称作超级权限者的用户主目录<br>5）&#x2F;lib  系统开机所需要最基本的动态连接共享库，其作用类似于Windows里的DLL文件。几乎所有的应用程序都需要用到这些共享库<br>6）&#x2F;lsot+found 这个目录一般情况下是空的，当系统非法关机后，这里就存放了一些文件。<br>7）&#x2F;etc 【常用】所有的系统管理所需要的配置文件和子目录，比如安装mysql数据库my.conf<br>8）&#x2F;usr 【常用】这是一个非常重要的目录，用户的很多应用程序和文件都放在这个目录下，类似与Windows下的program files 目录。<br>9）&#x2F;boot 【常用】存放的是启动Linux时使用的一些核心文件，包括一些连接文件以及镜像文件。<br>10）&#x2F;proc 【不能动】这个目录是一个虚拟的目录，它是系统内存的映射，访问这个目录来获取系统信息11) &#x2F;srv[不能动] service 缩写，该目录存放一些服务启动之后需要提取的数据</li>
+</ol>
+<ol start="12">
+<li><p>&#x2F;sys [不能动]这是 linux2.6 内核的一个很大的变化。该目录下安装了 2.6 内核中新出现的一个文件系统 sysfs &#x3D;》[别]</p>
+</li>
+<li><p>&#x2F;tmp 这个目录是用来存放一些临时文件的</p>
+</li>
+<li><p>&#x2F;dev 类似于 windows 的设备管理器，把所有的硬件用文件的形式存储<br>15)&#x2F;media【常用】linux 系统会自动识别一些设备，例如 U 盘、光驱等等，当识别后，liux 会把识别的设备挂载到这个目录下</p>
+</li>
+<li><p>&#x2F;mnt【常用】系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以将外部的存储挂载在&#x2F;mnt&#x2F;上，然后进入该目录就可以查看里的内容了。 d:&#x2F;myshare</p>
+</li>
+<li><p>&#x2F;opt 这是给主机额外安装软件所存放的目录。如安装 ORACLE 数据库就可放到该目录下。默认为空18) &#x2F;usr&#x2F;local[常用]<br>这是另一个给主机额外安装软件所安装的目录。一般是通过编译源码方式安装的程序</p>
+</li>
+<li><p>&#x2F;var 【常用】这个目录中存放着在不断扩充着的东西，习惯将经常被修改的目录放在这个目录下。包括各种日志文件</p>
+</li>
+<li><p>&#x2F;selinux[security-enhanced linux] SELinux 是一种安全子系统,它能控制程序只能访问特定文件，有三种工作模式，可以自行设置</p>
+</li>
+<li><p>&#x2F;var 【常用】这个目录中存放着在不断扩充着的东西，习惯将经常被修改的目录放在这个目录下。包括各种日志文件</p>
+</li>
+<li><p>&#x2F;selinux[security-enhanced linux] SELinux 是一种安全子系统,它能控制程序只能访问特定文件，有三种工作模式，可以自行设置</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/01/08/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/" data-id="clr4slxw70004qofn3brbdzvw" data-title="Linux目录结构" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/01/08/test-my-site/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          test_my_site
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/01/08/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">网络基础知识</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/01/08/test-my-site/">test_my_site</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/">Linux目录结构</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">网络基础知识</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/box%E9%9D%B6%E6%9C%BA/">box靶机</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E%E4%B9%8B%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E%E8%AF%A6%E8%A7%A3/">逻辑漏洞之支付漏洞详解</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>sqlmap使用 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="sqlmap使用sqlmapsqlmap是一个开源的自动化SQL注入工具，用于检测和利用Web应用程序中的SQL注入漏洞。它能够自动检测 和利用SQL注入漏洞，获取数据库中的数据，以及执行数据库管理系统的操作。sqlmap支持多种数据库管理系 统，包括MySQL、Oracle、PostgreSQL等。虽然sqlmap在合法的渗透测试和安全审计中是一种有用的工具， 但在未经授权的情况下使用它是非法和">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sqlmap使用">
+<meta property="og:url" content="http://example.com/2023/12/24/sqlmap%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="sqlmap使用sqlmapsqlmap是一个开源的自动化SQL注入工具，用于检测和利用Web应用程序中的SQL注入漏洞。它能够自动检测 和利用SQL注入漏洞，获取数据库中的数据，以及执行数据库管理系统的操作。sqlmap支持多种数据库管理系 统，包括MySQL、Oracle、PostgreSQL等。虽然sqlmap在合法的渗透测试和安全审计中是一种有用的工具， 但在未经授权的情况下使用它是非法和">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241028586.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241029007.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241029332.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241030404.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241030720.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241031895.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241031350.png">
+<meta property="article:published_time" content="2023-12-24T02:18:52.000Z">
+<meta property="article:modified_time" content="2023-12-24T02:32:22.913Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241028586.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-sqlmap使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/12/24/sqlmap%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time class="dt-published" datetime="2023-12-24T02:18:52.000Z" itemprop="datePublished">2023-12-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      sqlmap使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="sqlmap使用"><a href="#sqlmap使用" class="headerlink" title="sqlmap使用"></a>sqlmap使用</h1><h3 id="sqlmap"><a href="#sqlmap" class="headerlink" title="sqlmap"></a>sqlmap</h3><p>sqlmap是一个开源的自动化SQL注入工具，用于检测和利用Web应用程序中的SQL注入漏洞。它能够自动检测</p>
+<p>和利用SQL注入漏洞，获取数据库中的数据，以及执行数据库管理系统的操作。sqlmap支持多种数据库管理系</p>
+<p>统，包括MySQL、Oracle、PostgreSQL等。虽然sqlmap在合法的渗透测试和安全审计中是一种有用的工具，</p>
+<p>但在未经授权的情况下使用它是非法和违法的。因此，使用sqlmap时必须要遵守相关法律法规。</p>
+<h3 id="sqlmap使用-1"><a href="#sqlmap使用-1" class="headerlink" title="sqlmap使用"></a>sqlmap使用</h3><p>首先关闭杀毒软件与防火墙</p>
+<p>主要是s</p>
+<p>在文件sqlmap-1.7的根目录下打开cmd终端</p>
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241028586.png" alt="image-20231224102820150"></p>
+<p>cmd终端输入</p>
+<p>“dir”是一个用于显示目录内容的命令，会列出当前目录中的文件和子目录。您可以看到每个文件或目录的名称、大小修改日期等信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dir</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241029007.png" alt="image-20231224102920879"></p>
+<p>找到sqlmap.py</p>
+<p>调用Python解释器来执行名为<code>sqlmap.py</code>的Python脚本，并将<code>-h</code>作为参数传递给该脚本</p>
+<p>执行<code>python sqlmap.py -h</code>命令后，<code>sqlmap.py</code>脚本将打印出关于该工具的帮助信息，包括命令行选项、用法示例、参数说明等</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python sqlmap.py -h</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241029332.png" alt="image-20231224102950222"></p>
+<p>可以查看命令的使用方法</p>
+<p>调用Python解释器来执行名为<code>sqlmap.py</code>的Python脚本，并将<code>-u &quot;http://192.168.2.4/sqli/Less-1/?id=1&quot;</code>作为参数传递给该脚本</p>
+<p>执行后，<code>sqlmap.py</code>将开始尝试检测和利用目标URL上的SQL注入漏洞，并尝试获取数据库的名称。它会输出关于进程的信息以及找到的数据库名称，供进一步的渗透测试或漏洞利用使用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python sqlmap.py -u &quot;http://192.168.2.4/sqli/Less-1/?id=1&quot; --dbs</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241030404.png" alt="image-20231224103021172"></p>
+<p>此次错误是因为没有关闭病毒防护的实时保护</p>
+<p>关闭后</p>
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241030720.png" alt="image-20231224103051497"></p>
+<p>输入后会有三个问题</p>
+<p>1这个看起来后端数据库管理系统是MySQL，你想要跳过特定于其他DBMS的测试负载吗</p>
+<p>选择y是</p>
+<p>2对于剩下的测试，是否要包括所有针对“MySQL”扩展的测试，提供的水平(1)和风险(1)值</p>
+<p>选择是y</p>
+<p>3得到的参数很脆弱，你想继续测试其他的(如果有的话)吗?</p>
+<p>选择是y</p>
+<ul>
+<li><code>http://192.168.2.4/sqli/Less-1/?id=1</code>是一个示例目标URL</li>
+<li><code>--batch</code>：指定以批处理模式运行，即在不进行人工交互的情况下自动执行所有操作。</li>
+<li><code>-D security</code>：指定要操作的数据库名称，这里设置为”security”。</li>
+<li><code>--tables</code>：指定要获取指定数据库中的表的列表。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python sqlmap.py -u &quot;http://192.168.2.4/sqli/Less-1/?id=1&quot;  --batch -D security --tables</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241031895.png" alt="image-20231224103123864"></p>
+<ul>
+<li><code>--batch</code>：指定以批处理模式运行，即在不进行人工交互的情况下自动执行所有操作。</li>
+<li><code>-D security</code>：指定要操作的数据库名称，这里设置为”security”。</li>
+<li><code>-T users</code>：指定要操作的表名，这里设置为”users”。</li>
+<li><code>-C &quot;id,username&quot;</code>：指定要导出的列名，这里设置为”id”和”username”。</li>
+<li><code>--dump</code>：指定导出数据的操作，将导出指定表中指定列的数据。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python sqlmap.py -u &quot;http://192.168.2.4/sqli/Less-1/?id=1&quot; --batch -D security -T users -C &quot;id,username&quot; </span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241031350.png" alt="image-20231224103153982"></p>
+<h4 id="sqlmap参数："><a href="#sqlmap参数：" class="headerlink" title="sqlmap参数："></a>sqlmap参数：</h4><p>可以通过运行<code>sqlmap --help</code>命令来获取更详细的信息，其中包含了所有可用的参数和选项</p>
+<ul>
+<li><code>-u</code>：指定目标URL进行注入测试。</li>
+<li><code>-r</code>：指定包含HTTP请求的文件进行注入测试。</li>
+<li><code>--data</code>：指定POST请求的数据进行注入测试。</li>
+<li><code>-p</code>：指定要测试的参数名。</li>
+<li><code>--cookie</code>：设置Cookie参数。</li>
+<li><code>--level</code>：指定注入的难度级别，从1到5。</li>
+<li><code>--risk</code>：指定注入的风险级别，从1到3。</li>
+<li><code>--threads</code>：设置并发线程数。</li>
+<li><code>--random-agent</code>：使用随机的User-Agent头。</li>
+<li><code>--proxy</code>：设置HTTP代理。</li>
+<li><code>--dbms</code>：指定目标数据库管理系统。</li>
+<li><code>--os</code>：指定目标操作系统。</li>
+<li><code>--tamper</code>：指定自定义的数据篡改脚本。</li>
+<li><code>--tables</code>：列出目标数据库中的所有表。</li>
+<li><code>--columns</code>：列出指定表中的所有列。</li>
+<li><code>--dump</code>：导出指定表中的数据。</li>
+<li><code>--dump-all</code>：导出目标数据库中的所有数据。</li>
+<li><code>--dbms</code>：指定目标数据库管理系统，如MySQL、Oracle、SQL Server等。</li>
+<li><code>--os</code>：指定目标操作系统，如Windows、Linux等。</li>
+<li><code>--technique</code>：指定注入测试的技术，如基于错误的注入、联合查询注入等。</li>
+<li><code>--time-sec</code>：指定基于时间的盲注的延迟时间。</li>
+<li><code>--batch</code>：使用批量模式，自动选择所有可用选项。</li>
+<li><code>--smart</code>：智能检测注入漏洞并测试。</li>
+<li><code>--skip-urlencode</code>：跳过URL编码的注入测试。</li>
+<li><code>--tamper</code>：使用自定义的数据篡改脚本进行注入测试。</li>
+<li><code>--dns-domain</code>：执行DNS域名解析。</li>
+<li><code>--dns-server</code>：指定自定义的DNS服务器。</li>
+<li><code>--dns-ip</code>：指定自定义的DNS服务器IP地址。</li>
+<li><code>--common-tables</code>：列出常见的系统表。</li>
+<li><code>--common-columns</code>：列出常见的系统列。</li>
+<li><code>--privileges</code>：列出当前用户的权限。</li>
+<li><code>--users</code>：列出目标数据库中的用户。</li>
+<li><code>--passwords</code>：尝试获取目标数据库中的用户密码。</li>
+<li><code>--file-read</code>：读取目标服务器上的文件。</li>
+<li><code>--file-write</code>：在目标服务器上写入文件。</li>
+<li><code>--os-cmd</code>：执行操作系统命令。</li>
+<li><code>--os-shell</code>：在目标服务器上打开命令行Shell。</li>
+<li><code>--sql-shell</code>：在目标服务器上打开SQL交互Shell。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/12/24/sqlmap%E4%BD%BF%E7%94%A8/" data-id="clr4slxwc000eqofn51md2zev" data-title="sqlmap使用" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/01/08/SQL%E8%AF%AD%E5%8F%A5%E5%92%8CSQLMAP%E8%AF%AD%E5%8F%A5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          SQL语句和SQLMAP语句
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/12/24/Injections/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Injections</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/01/08/test-my-site/">test_my_site</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/">Linux目录结构</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">网络基础知识</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/box%E9%9D%B6%E6%9C%BA/">box靶机</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E%E4%B9%8B%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E%E8%AF%A6%E8%A7%A3/">逻辑漏洞之支付漏洞详解</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

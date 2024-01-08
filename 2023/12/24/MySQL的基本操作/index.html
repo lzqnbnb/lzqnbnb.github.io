@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>MySQL的基本操作 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="MySQL的基本操作进入MySQL：进入MySQL的根目录下的bin目录(……..\MySQL5.7.26\bin)，再在上面栏中输入cmd,点击Ente进入该目录下的命令行窗口 或者选择直接打开命令行窗口cd到……..\MySQL5.7.26\bin目录下 再在该窗口中输入， 12mysql -u root -p #-u用于指定登录MySQL服务器的用户名。-p: 用于指定登录MySQL服务器的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL的基本操作">
+<meta property="og:url" content="http://example.com/2023/12/24/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="MySQL的基本操作进入MySQL：进入MySQL的根目录下的bin目录(……..\MySQL5.7.26\bin)，再在上面栏中输入cmd,点击Ente进入该目录下的命令行窗口 或者选择直接打开命令行窗口cd到……..\MySQL5.7.26\bin目录下 再在该窗口中输入， 12mysql -u root -p #-u用于指定登录MySQL服务器的用户名。-p: 用于指定登录MySQL服务器的">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-12-24T01:59:04.000Z">
+<meta property="article:modified_time" content="2023-12-24T01:59:57.448Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-MySQL的基本操作" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/12/24/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="article-date">
+  <time class="dt-published" datetime="2023-12-24T01:59:04.000Z" itemprop="datePublished">2023-12-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      MySQL的基本操作
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="MySQL的基本操作"><a href="#MySQL的基本操作" class="headerlink" title="MySQL的基本操作"></a>MySQL的基本操作</h3><h3 id="进入MySQL："><a href="#进入MySQL：" class="headerlink" title="进入MySQL："></a>进入MySQL：</h3><p>进入MySQL的根目录下的bin目录(……..\MySQL5.7.26\bin)，再在上面栏中输入cmd,点击Ente进入该目录下的命令行窗口</p>
+<p>或者选择直接打开命令行窗口cd到……..\MySQL5.7.26\bin目录下</p>
+<p>再在该窗口中输入，</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">mysql -u root -p #-u用于指定登录MySQL服务器的用户名。-p: 用于指定登录MySQL服务器的密码。</span><br></pre></td></tr></table></figure>
+
+<p>进入root用户的登陆界面</p>
+<p>输入密码，直接Enter登陆，请记住MySQL密码，密码忘记了在找回密码很麻烦很麻烦！且MySQL卸载容易残留内容。</p>
+<p>后续mysql数据库需要使用到远程操控（虚拟机之类）</p>
+<h3 id="解除远程限制"><a href="#解除远程限制" class="headerlink" title="解除远程限制"></a>解除远程限制</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">use mysql; # 使用mysql这个数据库</span><br><span class="line"></span><br><span class="line">update user set Host=&#x27;%&#x27; where User=&#x27;root&#x27;; # 更新&quot;user&quot;表中&quot;User&quot;列为&#x27;root&#x27;的行，将相应行												的&quot;Host&quot;列设置为&#x27;%&#x27;。给与root用户在任何主机访												问权限</span><br><span class="line">flush privileges; #重新加载授权表，使对用户权限的更改立即生效</span><br></pre></td></tr></table></figure>
+
+<p>use xxxx;  选择数据库,后续SQL操作将在xxx数据库中进行,它不会真正“使用”某个数据库,而是选择操作对象为某个数据库。</p>
+<p>然后就可以通过MySQL辅助软件从物理机连接虚拟机了，查询好虚拟机ip</p>
+<h3 id="MySQL数据库操作"><a href="#MySQL数据库操作" class="headerlink" title="MySQL数据库操作"></a>MySQL数据库操作</h3><p>MySQL名字要求：可以使用字母、数字和下划线，必须以字母开头，长度不能超过64个字符，MySQL对于英语大小写很敏感，取名尽量要有意义，避免使用MySQL保留字命名如SELECT、INSERT、UPDATE、DELETE等</p>
+<p>展示已有数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">show databases;</span><br></pre></td></tr></table></figure>
+
+<p>创建数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">create database database_name;</span><br><span class="line"></span><br><span class="line">create database test;</span><br></pre></td></tr></table></figure>
+
+<p>删除数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">drop database database_name;</span><br><span class="line"></span><br><span class="line">drop database test;</span><br></pre></td></tr></table></figure>
+
+<p>选择&#x2F;使用数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">use database_name;</span><br><span class="line"></span><br><span class="line">use security;</span><br></pre></td></tr></table></figure>
+
+<p>显示库表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">show tables;</span><br></pre></td></tr></table></figure>
+
+<h3 id="MySQL表操作"><a href="#MySQL表操作" class="headerlink" title="MySQL表操作"></a>MySQL表操作</h3><p>创建表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">create table table_name(列名 类型(长度要求),列名 类型(长度要求),......);</span><br><span class="line"></span><br><span class="line">create table student(id int,name char(10),age int,sex char(5));</span><br></pre></td></tr></table></figure>
+
+<p>查看表结构</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">desc table_name;</span><br><span class="line"></span><br><span class="line">desc student;</span><br></pre></td></tr></table></figure>
+
+<p>删除表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">drop table table_name;</span><br><span class="line"></span><br><span class="line">drop table student;</span><br></pre></td></tr></table></figure>
+
+<p>表添加列</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">alter table table_name add 列名 类型(*);</span><br><span class="line"></span><br><span class="line">alter table student add height int(10);</span><br></pre></td></tr></table></figure>
+
+<p>表删除列</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">alter table table_name drop 列名;</span><br><span class="line"></span><br><span class="line">alter table student drop height</span><br></pre></td></tr></table></figure>
+
+<p>列改名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">alter table 表名 change column 被改列名 要改成的名字 类型;</span><br><span class="line"></span><br><span class="line">alter table student change column height high int(3);</span><br></pre></td></tr></table></figure>
+
+<p>列更改数据类型</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">alter table 表名 modify column 要改的列名 数据类型</span><br><span class="line"></span><br><span class="line">alter table student modify column high char(10);</span><br></pre></td></tr></table></figure>
+
+<p>修改表名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">alter table 前表名 rename to 要改成的表名;</span><br><span class="line"></span><br><span class="line">alter table student rename to student_table1;</span><br><span class="line">show tables;</span><br></pre></td></tr></table></figure>
+
+<h3 id="MySQL数据操作"><a href="#MySQL数据操作" class="headerlink" title="MySQL数据操作"></a>MySQL数据操作</h3><p>增加&#x2F;插入数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">insert into u&#x27;s表名 (列名1,列名,列名1,...) value (数据,数据,数据,数据,...);</span><br><span class="line"></span><br><span class="line">insert into student_table(id,name,age,sex,high) value (001,&quot;张三&quot;,10,&quot;男&quot;,160);</span><br><span class="line">insert into student_table(id,name,age,sex,high) value (002,&quot;丽丽&quot;,12,&quot;女&quot;,140);</span><br><span class="line">select * from student_table;</span><br></pre></td></tr></table></figure>
+
+<p>删除数据项</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">delete from 表名 where 列名=条件;</span><br><span class="line"></span><br><span class="line">delete from student_table where high=140;</span><br></pre></td></tr></table></figure>
+
+<p>更新数据项</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">update 表名 set 列名=数据 where 条件;</span><br><span class="line"></span><br><span class="line">update student_table  set age=12;</span><br><span class="line">update student_table set age=12 where name=&#x27;张三&#x27;;</span><br><span class="line">select * from student_table;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>between</p>
+<p> 最小值 and 最大值</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">create table stu(id int,name char(10),age int,sex char(5),high int(3));</span><br><span class="line">insert into stu(id,name,age,sex,high) value (001,&quot;张三&quot;,10,&quot;男&quot;,160);</span><br><span class="line">insert into stu(id,name,age,sex,high) value (002,&quot;丽丽&quot;,12,&quot;女&quot;,140);</span><br><span class="line">insert into stu(id,name,age,sex,high) value (003,&quot;王五&quot;,11,&quot;男&quot;,140);</span><br><span class="line">insert into stu(id,name,age,sex,high) value (004,&quot;李四&quot;,12,&quot;男&quot;,140);</span><br><span class="line">insert into stu(id,name,age,sex,high) value (005,&quot;王伟&quot;,11,&quot;男&quot;,140);</span><br><span class="line">insert into stu(id,name,age,sex,high) value (006,&quot;华子&quot;,12,&quot;男&quot;,140);</span><br><span class="line"></span><br><span class="line">select * from 表名 where 列名 between 最小值 and 最大值；</span><br><span class="line"></span><br><span class="line">select * from stu where id between 2 and 4;</span><br><span class="line">select * from stu where id&gt;=2 and id&lt;=4;</span><br></pre></td></tr></table></figure>
+
+<p>空值 null</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">select * from 表名 where 列名 is null；（判断这一列有空值）</span><br><span class="line"></span><br><span class="line">select * from stu where high is null;</span><br></pre></td></tr></table></figure>
+
+<p>in(额外取值)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：select * from 表名 where 列名 in （值1，值2，…）</span><br><span class="line"></span><br><span class="line">select * from stu where age in(10,11,9);</span><br><span class="line">select * from stu where age in(10,11);</span><br></pre></td></tr></table></figure>
+
+<p>like 好像</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">% 代表任意字符 ,_一个下划线代替一个字符</span><br><span class="line">select * from 表名 where 列名 like ‘通配符 特征 通配符’；</span><br><span class="line"></span><br><span class="line">select * from student where name like &#x27;王_&#x27;;</span><br><span class="line">insert into stu(id,name,age,sex,high) value (009,&quot;王八蛋&quot;,11,&quot;男&quot;,140);</span><br><span class="line">select * from student where name like &#x27;王%&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>as 为表名称或者列名称指定别名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">select name as mz from stu where name like &#x27;王_&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>union合并两个或多个select语句结果集</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">select * from stu;</span><br><span class="line">select id from stu as st where st.name like &#x27;张_&#x27; union select name from stu where age=9;</span><br><span class="line"></span><br><span class="line">select id from stu as st where st.name like &#x27;张_&#x27; union select name from stu where high=140;</span><br></pre></td></tr></table></figure>
+
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><p>order by</p>
+<p>规则：升序排序 asc （默认可省略） 降序排序 desc</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">单列 select * from 表名 order by 列名 asc或者 desc；</span><br><span class="line">多列 select * from 表名 order by 列名 asc或者 desc，列名2 asc或者desc，…;</span><br><span class="line"></span><br><span class="line">select * from stu order by age;</span><br><span class="line">select * from stu order by age desc;</span><br><span class="line">select * from stu order by age asc,id desc;</span><br></pre></td></tr></table></figure>
+
+<h3 id="去重"><a href="#去重" class="headerlink" title="去重"></a>去重</h3><p>GROUP BY 和 DISTINCT 都是用于从数据库中选择唯一值的 SQL 子句</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">select distinct age from stu;</span><br><span class="line"></span><br><span class="line">select age,count(*) from stu group by age;</span><br><span class="line">select age from stu group by age;</span><br></pre></td></tr></table></figure>
+
+<p>GROUP BY 语句用于将数据按照一个或多个列进行分组，然后对每个组应用一个聚合函数以得到每个组的统计结果。GROUP BY 通常用于在查询中生成汇总信息。</p>
+<p>DISTINCT 语句用于从查询结果中选择唯一的值。它可以用于从一个或多个列中选择唯一的值，也可以用于选择整行的唯一值。</p>
+<h3 id="统计函数"><a href="#统计函数" class="headerlink" title="统计函数"></a>统计函数</h3><p>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">select 统计函数（列名），统计函数（列名2）... from 表名;</span><br></pre></td></tr></table></figure>
+
+<p>count：计算指定列或表达式的行数，可以用于统计记录数量。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">SELECT COUNT(*) FROM table_name; 将返回表中的记录数。</span><br><span class="line"></span><br><span class="line">select id,count(*) from stu group by id;</span><br></pre></td></tr></table></figure>
+
+<p>sum：计算指定列或表达式的总和。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">SELECT SUM(salary) FROM employees; 将返回 employees 表中 salary 列的总和。</span><br><span class="line"></span><br><span class="line">select sum(high) from stu;</span><br></pre></td></tr></table></figure>
+
+<p>avg：计算指定列或表达式的平均值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">SELECT AVG(age) FROM students; 将返回 students 表中 age 列的平均值。</span><br><span class="line"></span><br><span class="line">select avg(high) from stu;</span><br></pre></td></tr></table></figure>
+
+<p>max：返回指定列或表达式的最大值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">SELECT MAX(price) FROM products; 将返回 products 表中 price 列的最大值。</span><br><span class="line"></span><br><span class="line">select max(id) from stu;</span><br></pre></td></tr></table></figure>
+
+<p>MIN：返回指定列或表达式的最小值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">SELECT MIN(quantity) FROM inventory; 将返回 inventory 表中 quantity 列的最小值。</span><br><span class="line"></span><br><span class="line">select min(id) from stu;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/12/24/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" data-id="clr4slxw60002qofn8kgkbb5n" data-title="MySQL的基本操作" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/12/24/%E6%BC%8F%E6%B4%9E/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          漏洞
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/12/24/yakit%E4%B8%8Epstman%E4%BD%BF%E7%94%A8%E5%AE%89%E8%A3%85/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">yakit与pstman使用安装</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/01/08/test-my-site/">test_my_site</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/">Linux目录结构</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">网络基础知识</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/box%E9%9D%B6%E6%9C%BA/">box靶机</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E%E4%B9%8B%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E%E8%AF%A6%E8%A7%A3/">逻辑漏洞之支付漏洞详解</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

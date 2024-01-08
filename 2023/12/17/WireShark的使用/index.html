@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>WireShark的使用 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="WireShark的使用一丶WireShark的使用网络分析工具WireShark的使用WireShark是非常流行的网络封包分析工具，可以截取各种网络数据包，并显示数据包详细信息。常用于开发测试过程中各种问题定位 WireShark软件安装软件下载路径：wireshark官网。按照系统版本选择下载  管理员身份运行  选择对应的网卡，右键，会出现Start Capture(开始捕获)，点击即可进">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WireShark的使用">
+<meta property="og:url" content="http://example.com/2023/12/17/WireShark%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="WireShark的使用一丶WireShark的使用网络分析工具WireShark的使用WireShark是非常流行的网络封包分析工具，可以截取各种网络数据包，并显示数据包详细信息。常用于开发测试过程中各种问题定位 WireShark软件安装软件下载路径：wireshark官网。按照系统版本选择下载  管理员身份运行  选择对应的网卡，右键，会出现Start Capture(开始捕获)，点击即可进">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312171949551.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312171950382.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312171950934.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312171951186.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312171952085.png">
+<meta property="article:published_time" content="2023-12-17T11:39:56.000Z">
+<meta property="article:modified_time" content="2023-12-17T11:53:30.376Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312171949551.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-WireShark的使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/12/17/WireShark%E7%9A%84%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time class="dt-published" datetime="2023-12-17T11:39:56.000Z" itemprop="datePublished">2023-12-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      WireShark的使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="WireShark的使用"><a href="#WireShark的使用" class="headerlink" title="WireShark的使用"></a>WireShark的使用</h1><h4 id="一丶WireShark的使用"><a href="#一丶WireShark的使用" class="headerlink" title="一丶WireShark的使用"></a>一丶WireShark的使用</h4><h3 id="网络分析工具WireShark的使用"><a href="#网络分析工具WireShark的使用" class="headerlink" title="网络分析工具WireShark的使用"></a>网络分析工具WireShark的使用</h3><p>WireShark是非常流行的网络封包分析工具，可以截取各种网络数据包，并显示数据包详细信息。常用于开发测试过程中各种问题定位</p>
+<p>WireShark软件安装软件下载路径：<a target="_blank" rel="noopener" href="https://www.wireshark.org/">wireshark官网</a>。按照系统版本选择下载</p>
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312171949551.png" alt="image-20231205200833803"></p>
+<p>管理员身份运行</p>
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312171950382.png" alt="image-20231205200945972"></p>
+<p>选择对应的网卡，右键，会出现Start Capture(开始捕获)，点击即可进行捕获该网络信息，开始抓取网络包</p>
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312171950934.png" alt="image-20231205201224375"></p>
+<p>执行需要抓包的操作，如ping <a target="_blank" rel="noopener" href="http://www.baidu.com./">www.baidu.com。</a></p>
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312171951186.png" alt="image-20231205201403018"></p>
+<p>操作完成后相关数据包就抓取到了。为避免其他无用的数据包影响分析，可以通过在过滤栏设置过滤条件进行数据包列表过滤</p>
+<p>ping操作属于icmp</p>
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312171952085.png" alt="image-20231205201529669"></p>
+<p>wireshark抓包完成</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/12/17/WireShark%E7%9A%84%E4%BD%BF%E7%94%A8/" data-id="clr4slxw80006qofnb4s407nt" data-title="WireShark的使用" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/12/17/Vue%E4%B8%8Epostman%E4%B8%8Enavicat%E5%AE%89%E8%A3%85/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Vue与postman与navicat安装
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/12/10/proxifier%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">proxifier软件的使用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/01/08/test-my-site/">test_my_site</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/">Linux目录结构</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">网络基础知识</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/box%E9%9D%B6%E6%9C%BA/">box靶机</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E%E4%B9%8B%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E%E8%AF%A6%E8%A7%A3/">逻辑漏洞之支付漏洞详解</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

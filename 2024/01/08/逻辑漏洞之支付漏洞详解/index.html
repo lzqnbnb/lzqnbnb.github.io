@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>逻辑漏洞之支付漏洞详解 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="一、漏洞介绍所有涉及购买、支付等方面的功能处就有可能存在支付漏洞。 二、漏洞原理一般支付流程：  用户用钱包加上优惠券&#x2F;折扣券确认购买商品的单价、数量以及购买时间，提交给平台或商家确认无误后，确认支付信息，报告购买信息。其中有三个重要的因素：用户、商品、平台&#x2F;商家。这三个因素在支付流程中都有可能造成支付漏洞。 三、漏洞危害对企业和用户的危害极大。 四、利用前提 目标网站有支付系">
+<meta property="og:type" content="article">
+<meta property="og:title" content="逻辑漏洞之支付漏洞详解">
+<meta property="og:url" content="http://example.com/2024/01/08/%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E%E4%B9%8B%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E%E8%AF%A6%E8%A7%A3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、漏洞介绍所有涉及购买、支付等方面的功能处就有可能存在支付漏洞。 二、漏洞原理一般支付流程：  用户用钱包加上优惠券&#x2F;折扣券确认购买商品的单价、数量以及购买时间，提交给平台或商家确认无误后，确认支付信息，报告购买信息。其中有三个重要的因素：用户、商品、平台&#x2F;商家。这三个因素在支付流程中都有可能造成支付漏洞。 三、漏洞危害对企业和用户的危害极大。 四、利用前提 目标网站有支付系">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401081019229.png">
+<meta property="article:published_time" content="2024-01-08T02:19:10.000Z">
+<meta property="article:modified_time" content="2024-01-08T02:20:14.011Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401081019229.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-逻辑漏洞之支付漏洞详解" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/01/08/%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E%E4%B9%8B%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E%E8%AF%A6%E8%A7%A3/" class="article-date">
+  <time class="dt-published" datetime="2024-01-08T02:19:10.000Z" itemprop="datePublished">2024-01-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      逻辑漏洞之支付漏洞详解
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="一、漏洞介绍"><a href="#一、漏洞介绍" class="headerlink" title="一、漏洞介绍"></a>一、漏洞介绍</h2><p>所有涉及购买、支付等方面的功能处就有可能存在支付漏洞。</p>
+<h2 id="二、漏洞原理"><a href="#二、漏洞原理" class="headerlink" title="二、漏洞原理"></a>二、漏洞原理</h2><p>一般支付流程：</p>
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401081019229.png" alt="image-20240108101949897"></p>
+<p>用户用钱包加上优惠券&#x2F;折扣券确认购买商品的单价、数量以及购买时间，提交给平台或商家确认无误后，确认支付信息，报告购买信息。其中有三个重要的因素：用户、商品、平台&#x2F;商家。这三个因素在支付流程中都有可能造成支付漏洞。</p>
+<h2 id="三、漏洞危害"><a href="#三、漏洞危害" class="headerlink" title="三、漏洞危害"></a>三、漏洞危害</h2><p>对企业和用户的危害极大。</p>
+<h3 id="四、利用前提"><a href="#四、利用前提" class="headerlink" title="四、利用前提"></a>四、利用前提</h3><p> 目标网站有支付系统</p>
+<p> 在字符流程中，对于用户、商品、平台&#x2F;商家三个重要因素之间有漏洞。</p>
+<h3 id="五、挖掘利用"><a href="#五、挖掘利用" class="headerlink" title="五、挖掘利用"></a>五、挖掘利用</h3><h4 id="1、一般类型"><a href="#1、一般类型" class="headerlink" title="1、一般类型"></a>1、一般类型</h4><p>1.描述</p>
+<p>这里的一般类型主要是指在支付流程中，由三个因素之间产生的漏洞。</p>
+<p>2.挖掘</p>
+<p>寻找网站的支付系统，或兑换系统，抓包判断有没有敏感信息可以修改。</p>
+<p>3.利用</p>
+<ol>
+<li>修改支付价格</li>
+</ol>
+<p>在支付流程中，提交购买信息、确认支付、确认购买的流程中，如果相互之间没有做好验证机制，就有可能出现修改支付价格的漏洞。</p>
+<p>在这三个步骤中，可以尝试抓包，修改支付价格。</p>
+<ol>
+<li>修改支付状态</li>
+</ol>
+<p>这个问题是没有对支付状态的值跟实际订单支付状态进行校验，导致点击支付时抓包修改决定支付或未支付的参数为支付状态的值从而达到支付成功。</p>
+<ol>
+<li>修改购买数量</li>
+</ol>
+<p>抓包，尝试修改购买数量，如果修改购买数量后，价格不变，亦或者修改购买数量为负数，如果价格为负数，同样会导致支付问题的产生。</p>
+<ol>
+<li>修改优惠券、积分</li>
+</ol>
+<p>如果优惠券、折扣券、积分等可以换取相应的物品，那么也有可能出现支付漏洞，这个流程与一般支付流程类似，可以尝试挖掘。</p>
+<p> 修改优惠劵金额</p>
+<p> 具体看优惠券的兑换方式，如果的是满减型，那么就尝试修改优惠券的金额、修改商品价格。如果是折扣类型，那么就尝试泽折扣程度。</p>
+<p> 修改优惠劵金额及业务逻辑问题</p>
+<p> 具体看优惠券的业务逻辑，比如说，如果支付价格为0时，会报错，提示购买失败，这是因为网站后台不允许提交0元的商品购买订单。</p>
+<p> 修改积分金额</p>
+<p> 修改积分金额与上面几点类似，同样是抓包判断能不能修改相关信息。</p>
+<ol>
+<li>修改支付接口</li>
+</ol>
+<p>比如一些网站支持很多种支付，比如自家的支付工具，第三方的支付工具，然后每个支付接口值不一样，如果逻辑设计不当，当我随便选择一个点击支付时进行抓包，然后修改其支付接口为一个不存在的接口，如果没做好不存在接口相关处理，那么此时就会支付成功。</p>
+<ol>
+<li>多重替换支付</li>
+</ol>
+<p>支付过程中，网站没有验证商品价格和用户的支付价格。首先去产生两个订单，这两个订单商品是不一样的，其价格不一样，如果服务端没有做好这相关的验证，那么在支付的过程当中抓包，修改其订单值为另一个订单值，最后支付，这时就可以用订单一的支付价格买到订单而的商品。</p>
+<ol>
+<li>重复支付</li>
+</ol>
+<p>一些交易市场有一类似于试用牌子或者其它，这个试用牌子可以依靠签到获得，而这个牌子的作用可以去试用一些商品，在你进行试用的时候会扣掉你的试用牌子，当你试用完成或者主动取消试用时，试用牌子会返回到账户当中。如果没有进行对订单多重提交的校验，那么就可导致无限制刷牌子，比如，你试用时抓包，然后你每次试用都会产生一个订单号，然后利用刚抓到的数据包进行批量提交，你就可以看到每次提交的订单号不一样，然后这时你再看订单可以看到同一个商品的无数订单，但试用牌子数只扣了你第一个试验时的牌子数，那么这时你申请批量退出试用，那么这么多订单，每退一个就会退相应的牌子数量到账户当中，这就构成了无限制刷得问题。</p>
+<ol>
+<li>最小额支付</li>
+</ol>
+<p>在修改支付价格时，如果没有支付成功或兑换成功，并不能说明该网站不存在支付漏洞。注意网站的最小支付额，网站可能会对此进行校验，小于这个最小支付额，无法购买，也有可能兑换的物品为空。</p>
+<ol>
+<li>值为最大值支付问题</li>
+</ol>
+<p>以前也是看到过相关的例子，一些网站比如你购买商品，这里有2个思路修改值，1是直接修改支付金额值为最大值，比如999999999，或者修改附属值，如优惠卷，积分等为999999999，如果这里逻辑设计有问题，那么其支付金额会变为0。</p>
+<p>\10. 无限制试用</p>
+<p>一些网站的一些商品，比如云系列产品支持试用，试用时期一般为7天或者30天，一个账户只能试用一次，试用期间不能再试用，但如果这个试用接口没做好分配那么很容易导致问题的发生。</p>
+<h4 id="2、特殊类型"><a href="#2、特殊类型" class="headerlink" title="2、特殊类型"></a>2、特殊类型</h4><p>1.描述</p>
+<p>可以尝试用其他漏洞触发支付漏洞，比如说SQL注入漏洞、越权漏洞等。</p>
+<p>2.挖掘</p>
+<p>详情请见其他漏洞挖掘。</p>
+<h4 id="3-利用"><a href="#3-利用" class="headerlink" title="3.利用"></a>3.利用</h4><ol>
+<li>越权支付</li>
+</ol>
+<p>在支付当中会出现当前用户的ID，比如：username&#x3D;XXXXX，如果没有加以验证，其支付也是一次性支付没有要求输入密码什么的机制，那么就可以修改这个用户ID为其它用户ID，达到用其他用户的账号进行支付你的商品。</p>
+<ol>
+<li>多线程并发</li>
+</ol>
+<p> 多线程并发问题就是没有实时的处理各种状态所导致的问题，之前挖掘过刷钱问题，就是利用该思路。</p>
+<p> 平台的钱包在提现时，没有任何验证码或者校验机制，只要输入提现金额就可以提现，并且是秒到账，如果什么负数，修改金额都测试过了都不行，那么你就可以试试多线程并发问题。利用方式就是利用burpsuite的intruder工具，频繁向网站申请提现。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/01/08/%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E%E4%B9%8B%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E%E8%AF%A6%E8%A7%A3/" data-id="clr4slxwh000qqofn8dgn0ut6" data-title="逻辑漏洞之支付漏洞详解" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/01/08/box%E9%9D%B6%E6%9C%BA/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          box靶机
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/01/08/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">信息收集</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/01/08/test-my-site/">test_my_site</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/">Linux目录结构</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">网络基础知识</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/box%E9%9D%B6%E6%9C%BA/">box靶机</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E%E4%B9%8B%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E%E8%AF%A6%E8%A7%A3/">逻辑漏洞之支付漏洞详解</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Burp的安装与使用，Oracle数据库注入 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Burp的安装与使用安装1.下载并安装Burp抓包软件（半汉化版），官网链接：https:&#x2F;&#x2F;portswigger.net&#x2F;burp2.cmd打开这个路径  在命令窗口输入Java -vision确认java版本是java19再输入java -jar burp-loader-keygen-2_1_06.jar然后会弹出下面的窗口  然后再双击汉化启动。 把左边的License复制到右边，点击下一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Burp的安装与使用，Oracle数据库注入">
+<meta property="og:url" content="http://example.com/2024/01/08/Burp%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8%EF%BC%8COracle%E6%95%B0%E6%8D%AE%E5%BA%93%E6%B3%A8%E5%85%A5/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Burp的安装与使用安装1.下载并安装Burp抓包软件（半汉化版），官网链接：https:&#x2F;&#x2F;portswigger.net&#x2F;burp2.cmd打开这个路径  在命令窗口输入Java -vision确认java版本是java19再输入java -jar burp-loader-keygen-2_1_06.jar然后会弹出下面的窗口  然后再双击汉化启动。 把左边的License复制到右边，点击下一">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401080957142.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401080957196.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401080959897.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401080959996.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401081000179.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401081000332.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401081001482.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401081001180.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401081001353.png">
+<meta property="article:published_time" content="2024-01-08T01:56:27.000Z">
+<meta property="article:modified_time" content="2024-01-08T02:02:22.268Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401080957142.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Burp的安装与使用，Oracle数据库注入" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/01/08/Burp%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8%EF%BC%8COracle%E6%95%B0%E6%8D%AE%E5%BA%93%E6%B3%A8%E5%85%A5/" class="article-date">
+  <time class="dt-published" datetime="2024-01-08T01:56:27.000Z" itemprop="datePublished">2024-01-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Burp的安装与使用，Oracle数据库注入
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Burp的安装与使用"><a href="#Burp的安装与使用" class="headerlink" title="Burp的安装与使用"></a>Burp的安装与使用</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>1.下载并安装Burp抓包软件（半汉化版），官网链接：<a target="_blank" rel="noopener" href="https://portswigger.net/burp">https://portswigger.net/burp</a><br>2.cmd打开这个路径</p>
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401080957142.png" alt="image-20240108095713786"></p>
+<p>在命令窗口输入Java -vision确认java版本是java19<br>再输入java -jar burp-loader-keygen-2_1_06.jar然后会弹出下面的窗口</p>
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401080957196.png" alt="image-20240108095747020"></p>
+<p>然后再双击汉化启动。</p>
+<p>把左边的License复制到右边，点击下一步&#x3D;&gt;手动激活</p>
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401080959897.png" alt="image-20240108095906613"></p>
+<p>过程1：把右边内容复制到左边<br>过程2：把左边下方内容复制到右边下方<br>点击下一个，激活成功</p>
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401080959996.png" alt="image-20240108095925530"></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>1.sqli第一关，用Burp抓包。依次点击Proxy–&gt;intercept–&gt;打开内置浏览器–&gt;复制第一关的链接粘贴到内置浏览器–&gt;HTTP history–&gt;对应的数据包</p>
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401081000179.png" alt="image-20240108100018957"></p>
+<p>用Burp爆破。右击数据包–&gt;发送到repeater</p>
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401081000332.png" alt="image-20240108100040998"></p>
+<p>1-50迭代。右击数据包–&gt;发送到intruder （intruder是爆破器 ）选择1–&gt;添加</p>
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401081001482.png" alt="image-20240108100106180"></p>
+<p>点击Payloads–&gt;Payloads type选择Numbers–&gt;1 50 1–&gt;点击发送</p>
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401081001180.png" alt="image-20240108100126992"></p>
+<p>最后就可以看出哪些是可以用数字进行绕过操作的。</p>
+<h2 id="Oracle数据库注入"><a href="#Oracle数据库注入" class="headerlink" title="Oracle数据库注入"></a>Oracle数据库注入</h2><p>靶场：<a target="_blank" rel="noopener" href="https://portswigger.net/web-security/all-labs">https://portswigger.net/web-security/all-labs</a></p>
+<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401081001353.png" alt="image-20240108100157980"></p>
+<p>Oracle数据库注入相关知识参考：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1944116">https://cloud.tencent.com/developer/article/1944116</a></p>
+<h3 id="注入过程"><a href="#注入过程" class="headerlink" title="注入过程"></a>注入过程</h3><h3 id="1-获取元数据"><a href="#1-获取元数据" class="headerlink" title="1. 获取元数据"></a>1. 获取元数据</h3><p>Oracle 也支持查询元数据，下面是 Oracle 注入常用的元数据视图：</p>
+<p>① user_tablespaces 视图，查看表空间</p>
+<p>SELECT tablespace_name FROM user_tablespaces</p>
+<p>② user_tables 视图，查看当前用户的所有表</p>
+<p>SELECT table_name FROM user_tables WHERE rownum &#x3D; 1</p>
+<p>③ user_tab_columns 视图，查看当前用户的所有列，如查询 user 表的所有列：</p>
+<p>SELECT column_name FROM user_tab_columns WHERE table_name &#x3D; ‘users’</p>
+<p>④ all_users 视图，查看 ORacle 数据库的所有用户</p>
+<p>SELECT username FROM all_users</p>
+<p>⑤ user_objects 视图，查看当前用户的所有对象 (表名称、约束、索引)</p>
+<p>SELECT object_name FROM user_objects</p>
+<h3 id="2-UNION-查询"><a href="#2-UNION-查询" class="headerlink" title="2. UNION 查询"></a>2. UNION 查询</h3><p>Oracle 与 MySQL 一样不支持多语句执行，不像 SQL Server 那样可以用分号隔开从而注入多条 SQL 语句。</p>
+<p>①获取列的总数</p>
+<p>获取列总数方法与前面两种数据库类似，依然可以使用 ORDER BY 子句来完成。</p>
+<p>另一种方法是利用 UNION 关键字来确定，但是 Oracle 规定，每次查询时后面必须跟表的名称，否则查询将不成立。</p>
+<p>在 Oracle 中可以使用：</p>
+<p>UNION SELECT null, null, null …… FROM dual</p>
+<p>这里的 dual 是 Oracle 中的虚拟表，在不知道数据库中存在哪些表的情况下，可以使用此表作为查询表。</p>
+<p>然后获取非数字类型列，即可以显示出信息的列：</p>
+<p>UNION SELECT ‘null’, null, null, …… FROM dual</p>
+<p>UNION SELECT null, ‘null’, null, …… FROM dual</p>
+<p>把每一位的 null 依次用单引号 ’ 引起来，如果报错，则不是字符串类型的列；如果返回正常，则是字符串类型的列，就可以在相应的位置插入查询语句获取信息。</p>
+<p>② 获取敏感信息</p>
+<p>常见的敏感信息如下：</p>
+<p>当前用户权限：SELECT * FROM session_roles</p>
+<p>当前数据库版本：SELECT banner FROM sys.v_$version WHERE rownum &#x3D; 1</p>
+<p>服务器出口 IP：用utl_http.request 可以实现</p>
+<p>服务器监听 IP：SELECT utl_inaddr.get_host_address FROM dual</p>
+<p>服务器操作系统：SELECT member FROM v$logfile WHERE rownum &#x3D; 1</p>
+<p>服务器 SID：SELECT instance_name FROM v$instance</p>
+<p>当前连接用户：SELECT SYS_CONTEXT(‘USERENV’, ‘CURRENT_USER’) FROM dual</p>
+<p>③ 获取数据库表及其内容</p>
+<p>在得知表的列数之后，可以通过查询元数据的方式查询表名称、列名称，然后查询数据，如：</p>
+<p><a target="_blank" rel="noopener" href="http://www.aaa.org/index.jsp?id=1">http://www.aaa.org/index.jsp?id=1</a> UNION SELECT username, password, null FROM users –</p>
+<p>注意：在查询数据时同样要注意数据类型，否则无法查询，只能一一测试，改变参数的查询位置。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/01/08/Burp%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8%EF%BC%8COracle%E6%95%B0%E6%8D%AE%E5%BA%93%E6%B3%A8%E5%85%A5/" data-id="clr4slxw50001qofngavh63rp" data-title="Burp的安装与使用，Oracle数据库注入" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/01/08/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          信息收集
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/01/08/%E5%AE%89%E5%85%A8%E7%8B%97-waf%E7%BB%95%E8%BF%87/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">安全狗-waf绕过</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/01/08/test-my-site/">test_my_site</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/">Linux目录结构</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">网络基础知识</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/box%E9%9D%B6%E6%9C%BA/">box靶机</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/08/%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E%E4%B9%8B%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E%E8%AF%A6%E8%A7%A3/">逻辑漏洞之支付漏洞详解</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
