@@ -51,7 +51,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-01-12 17:23:40'
+  postUpdate: '2024-01-14 01:02:47'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -148,140 +148,222 @@
         }
       }
       detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401121712730.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Emo"><span class="site-name">Emo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Emo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/12/%E5%9B%BE%E7%89%87/" title="Untitled">Untitled</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-12T09:12:15.650Z" title="Created 2024-01-12 17:12:15">2024-01-12</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-12T09:15:19.453Z" title="Updated 2024-01-12 17:15:19">2024-01-12</time></span></div><div class="content">
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401121712730.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Emo"><span class="site-name">Emo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Emo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/14/vulnhub-MONEYBOX1%E5%AD%A6%E4%B9%A0/" title="vulnhub-MONEYBOX1学习">vulnhub-MONEYBOX1学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-13T16:53:12.000Z" title="Created 2024-01-14 00:53:12">2024-01-14</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-13T17:00:26.573Z" title="Updated 2024-01-14 01:00:26">2024-01-14</time></span></div><div class="content">vulnhub-MONEYBOX1学习打开doracle mv virtualbox虚拟平台
+打开debian custum ctf虚拟机
+还有提权https://gtfobins.github.io/
+开始攻击靶机
+首先知道ip地址
+1icconfig
+
+
+1nmap -sP 192.168.56.102/24
+
+
+由mac地址扩展08：00：27：fb：ff：86
+确定地址192.168.56.101
+本地网络上执行ARP扫描，显示与您的eth0网络接口关联的本地IP地址和MAC地址的列表
+1arp-scan -l 
+
+
+nmap: 这是网络映射器（Network Mapper）的缩写，是一个用于网络发现和安全审计的开源工具
+-p-: 这个选项指示Nmap扫描所有可能的端口，而不是只扫描一些常见的端口。在这里，连字符（-）表示范围，而没有具体的端口号，因此表示扫描所有1到65535的端口
+192.168.46.156: 这是目标主机的IP地址，是要进行端口扫描的目标
+1nmap -p- 192.168.56.101
+
+
+-p 21,22,80: 这个选项指示Nmap只扫描指定的端口 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/14/virtualbox/" title="virtualbox">virtualbox</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-13T16:45:54.000Z" title="Created 2024-01-14 00:45:54">2024-01-14</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-13T16:52:09.844Z" title="Updated 2024-01-14 00:52:09">2024-01-14</time></span></div><div class="content">oracle mv virtualbox下载
+
+双击打开
+
+强烈建议安装到固态硬盘，我安装到D
+
+下一步
+
+选择，是
+
+
+如果弹出了窗口，请点是，接着点完成
+
+打开
+
+点击管理
+
+导入虚拟电脑
+
+选择文件
+
+导入完成，打开设置
+
+usb设备选择usb1.1
+
+网络连接方式选择仅主机(host-only)
+
+在vmware中打开虚拟机设置
+
+确认网络适配器
+
+在vmware中打开虚拟网络编辑器
+
+右下角更改设置
+
+将桥接模式更改为virtualbox host-only Ethernet adapter
+
+关闭与重启网络适配器
+
+由mac地址扩展08：00：27：fb：ff：86
+确定地址192.168.56.101
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/14/Pikachu/" title="Pikachu">Pikachu</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-13T16:43:11.000Z" title="Created 2024-01-14 00:43:11">2024-01-14</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-13T16:45:30.047Z" title="Updated 2024-01-14 00:45:30">2024-01-14</time></span></div><div class="content">PikachuPikachu是一个带有漏洞的Web应用系统，在这里包含了常见的web安全漏洞
+pikachu下载完了之后直接拷贝到phpstudy下的www目录下，然后安装就可以使用了
+将压缩包解压，并放在phpstudy的www文件夹下
+
+数据库使用的是mysql，因此运行Pikachu需要提前安装好”PHP+MYSQL+中间件（如apache,nginx等）”的基础环境
+把下载下来的pikachu文件夹放到web服务器根目录下
+根据实际情况修改inc&#x2F;config.inc.php里面的数据库连接配置
+
+就是修改数据库账号与密码
+
+访问http://127.0.0.1/pikachu,会有一个红色的热情提示&quot;欢迎使用,pikachu还没有初始化，点击进行初始化安装!&quot;,点击即可完成安装
+
+点击安装&#x2F;初始化
+
+点击安装后会显示数据库连接成功
+
+Pikachu上的漏洞类型列表如下：Burt Force(暴力破解漏洞)XSS(跨站脚本漏洞)CSRF(跨站请求伪造)SQL-Inject(SQL注入漏洞)RCE(远程命令&#x2F;代码执行)Files  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/14/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%B9%B3%E5%8F%B0/" title="网络空间搜索引擎平台">网络空间搜索引擎平台</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-13T16:35:17.000Z" title="Created 2024-01-14 00:35:17">2024-01-14</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-13T16:42:15.493Z" title="Updated 2024-01-14 00:42:15">2024-01-14</time></span></div><div class="content">网络空间搜索引擎平台网络空间搜索引擎和平台
+FOFA
+
+一款网络空间测绘的搜索引擎，旨在帮助用户以搜索的方式查找公网上的互联网资产。https://fofa.info
+简单来说，FOFA的使用方式类似于谷歌或百度，用户可以输入关键词来匹配包含该关键词的数据。不同的是，这些数据不仅包括像谷歌或百度一样的网页，还包括像摄像头、打印机、数据库、操作系统等资产
+fofa中有搜索语法，可以自己查看
+
+
+
+Quake
+
+360Quake是三六零数字安全集团公司开发的一款产品，网址为：quake.360.net，支持关键词、条件语句、IP&#x2F;域名批量搜索、网页图标搜索、热门搜索等多种方式搜索。有注册用户、高级会员、终身会员、企业定制的服务
+
+
+鹰图
+
+奇安信网络空间测绘平台（简称鹰图平台），可对全球暴露在互联网上的服务器和设备进行：资产探测、端口探活、协议解析、应用识别。通过网络空间测绘技术，将地理空间、社会空间、网络空间相互映射，将虚拟的网络空间绘制成一幅动态、实时、有效的网络空间地图，实现互联网资产的可查、可定位，帮助客户解决互联资产暴露面梳理的难题
+
+
+钟馗之眼
+
+ZoomEye是北京 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/14/%E9%9D%B6%E6%9C%BAtest/" title="靶机test">靶机test</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-13T16:28:19.000Z" title="Created 2024-01-14 00:28:19">2024-01-14</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-13T16:34:41.601Z" title="Updated 2024-01-14 00:34:41">2024-01-14</time></span></div><div class="content">靶机test安装靶机
+在虚拟机之中
+启动
+
+点击虚拟机中的设置
+在网络适配器nat中的右边
+高级选项中
+确定mac地址 00:0c:29:77:08:ce
+
+打开kali虚拟机终端
+查看ip
+1ifconfig
+
+
+eth0是指桥接模式
+eth2是指nat模式
+网络连接端扫描，找到靶机mac地址对应的IP
+1nmap -sP 192.168.46.128/24 
+
+
+由mac地址扩展00:0c:29:77:08:ce
+确定地址192.168.46.156
+访问网站
+
+虚拟机靶机
+
+攻击
+目录搜索
+1dirsearch -u &quot;http://192.168.46.156&quot; -x 403,404 
+
+
+结果如下
+
+访问&#x2F;robost.txt文件
+
+有个&#x2F;upgrade.txt文件，更新日志
+
+update才更新到7.x版本，版本太旧
+msfconsole的使用
+1msfconsole
+
+
+1search drupal
+
+
+1use 2
+
+
+1show options
+
+
+123set rhosts 192.168.46.156run
+
+
+1shell ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/14/Nmap%E5%AD%A6%E4%B9%A0/" title="Nmap学习">Nmap学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-13T16:25:02.000Z" title="Created 2024-01-14 00:25:02">2024-01-14</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-13T16:26:41.663Z" title="Updated 2024-01-14 00:26:41">2024-01-14</time></span></div><div class="content">Nmap学习kali的命令行中可以直接使用 nmap 命令，打开一个「终端」，输入 nmap 后回车，可以看到 nmap 的版本，证明 nmap 可用
+
+Nmap有四种基本功能：「端口扫描」、「主机探测」、「服务识别」和「系统识别」
+
+端口扫描
+扫描主机的「开放端口」，在nmap后面直接跟主机IP（默认扫描1000个端口）
+1指定端口
+扫描「指定端口」，使用 -p 参数，可以一次扫描单个端口、多个端口、或扫描一个范围的端口
+12345nmap 192.168.0.0 -p 80nmap 192.168.0.0 -p 1-80nmap 192.168.0.0 -p 80,3389,22,21nmap 192.168.0.0 -p 1-65535nmap 192.168.0.0 -p- -p- 等价于 -p 1-65535
+
+2指定扫描方式
+通过kali中的「wireshark」抓包分析不同扫描方式的请求信息，从而判断这些方式的区别
+主机探测
+扫描网段中有哪些主机在线，使用 -sP 参数，不扫描端口，只扫描「存活主机」
+本质上是Ping扫描，能Ping通有回包，就判定主机在线
+1nmap  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/14/%E8%B0%B7%E6%AD%8C%E8%AF%AD%E6%B3%95/" title="谷歌语法">谷歌语法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-13T16:22:41.000Z" title="Created 2024-01-14 00:22:41">2024-01-14</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-13T16:24:16.538Z" title="Updated 2024-01-14 00:24:16">2024-01-14</time></span></div><div class="content">谷歌语法谷歌搜索技巧是利用各种高级搜索语法或者搜索指令，让我们能够使用Google进行精确化的搜索，外贸找客户和学术文件查找都可以应用到这些搜索技巧。(大部分命令也适用百度搜索)。
+Google通过互联网收集数据，抓取有意义的信息，将其存储在数据中心。任意一次搜索，在不到一秒钟的时间里，它就会为你提供N个答案。熟悉谷歌搜索技巧，可以帮助你尽量准确地找到想要的信息。
+
+
+
+算 符
+含 义
+应用举例
+
+
+
+AND&#x2F;空格
+所连接的关键词之间是“与”的关系;
+云计算 分布式计算
+
+
+OR&#x2F;|
+所连接的关键词之间是“或”的关系
+图片 | 写真
+
+
+-
+所连接的关键词之间是“非”的关系
+神雕侠侣 -游戏
+
+
+（）
+在检索式中括号里的运算将优先进行
+电子商务 AND (云计算 -分布式计算)
+
+
+“”
+“”英文双引号中的内容作为一个整体被搜索; 精确匹配搜索
+“智能天线”
+
+
+*
+通配符-星号*，代表完整的字词; A * B、A * * B这两个是有区别的
+Flower * pots &#x2F;Flower * * pots
+
+
++
+强制搜索一般会被自动忽略的搜索关键词，如：w ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/12/%E5%9B%BE%E7%89%87/" title="Untitled">Untitled</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-12T09:12:15.650Z" title="Created 2024-01-12 17:12:15">2024-01-12</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-12T09:15:19.453Z" title="Updated 2024-01-12 17:15:19">2024-01-12</time></span></div><div class="content">
 
 </div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2024/01/08/test-my-site/" title="test_my_site">test_my_site</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-08T09:48:43.000Z" title="Created 2024-01-08 17:48:43">2024-01-08</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-08T09:48:43.073Z" title="Updated 2024-01-08 17:48:43">2024-01-08</time></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2024/01/08/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/" title="Linux目录结构">Linux目录结构</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-08T09:09:38.000Z" title="Created 2024-01-08 17:09:38">2024-01-08</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-08T09:17:06.769Z" title="Updated 2024-01-08 17:17:06">2024-01-08</time></span></div><div class="content">Linux目录结构
 基本介绍1）linux 的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“&#x2F;”，然后在此目录下再创建其它的目录。2)深刻理解linux树状文件目录是非常重要的。3）记住经典的一句话；在linux世界中，一切皆文件4）示意图
 
 
-2.具体的目录结构1）&#x2F;bin  【常用】   （&#x2F;usr&#x2F;bin 、&#x2F;usr&#x2F;local&#x2F;bin）是Binary的缩小写，这个目录存放着经常使用的命令2）&#x2F;sbin  (&#x2F;usr&#x2F;sbin、&#x2F;usr&#x2F;local&#x2F;sbin）s就是Super User的意思，这里存放的是系统管理员使用的系统管理程序。3）&#x2F;home【常用】  存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一般该目录名是以用户的账号命名。4）&#x2F;root 【常用】 该目录为系统管理员，也称作超级权限者的用户主目录5）&#x2F;lib  系统开机所需要最基本的动态连接共享库，其作用类似于Windows ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2024/01/08/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" title="网络基础知识">网络基础知识</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-08T09:09:04.000Z" title="Created 2024-01-08 17:09:04">2024-01-08</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-08T09:16:10.514Z" title="Updated 2024-01-08 17:16:10">2024-01-08</time></span></div><div class="content">一、Windows IP 配置1. 以太网适配器计算机与外界连接网络是通过主机箱插入一块网络接口板。网络接口板又称通信适配器或网络适配器或网络接口卡NIC，简单的名称为‘网卡’。
-2. 以太网有线网络
-
-3. 虚拟网卡以太网适配器VMware Network Adapter VMnet1、 VMware Network Adapter VMnet8
-
-4. 无线局域网适配器 WLAN（即是wifi）
-（1） ipv6
-​    也被称为IPng（IP Next Generation），也就是下一代IP协议。
-
-ipv6地址总长度为128比特，分为8组，每组为4个十六进制数的形式，每组十六进制数间隔。
-
- 例如：FC00:0000:130F:0000:0000:09C0:876A:130B
-
-ipv6地址缩写规则：
-
- 每组中的前导“0”都可以省略，即一组中全为0，则可以只写一个0，所以上述地址可写为：FC00:0:130F:0:0:9C0:876A:130B。
-
-地址中包含的连续两个或多个均为0的组，可以用双冒号“::”来代替
-
- 所以上述地址又可以进一步简写为：FC00:0:130F ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2024/01/08/box%E9%9D%B6%E6%9C%BA/" title="box靶机">box靶机</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-08T02:21:23.000Z" title="Created 2024-01-08 10:21:23">2024-01-08</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-08T06:26:54.349Z" title="Updated 2024-01-08 14:26:54">2024-01-08</time></span></div><div class="content">下载Oracle VMNVirtual Box可以理解为VMware mini
-下载menoy box虚拟机虚拟机地址：
-http://www.vulnhub.com/entry/moneybox-1,653/#download
-导入虚拟机，设置一下Oracle VMNVirtual Box，网络和usb设备需要设置，如下图
-
-
-kali设置1、编辑-虚拟网络编辑器
-2、更改设置—–vment0桥接模式 virtualbox
-
-12ifdown eth0          //关闭网卡ifup eth0            //开启网卡
-
-靶机1arp-scan -l -I eth0 本地网络上执行ARP扫描。它将显示与您的eth0网络接口关联的本地IP地址和MAC地址的列表
-
-
-12345nmap -p- 192.168.56.101nmap: 这是网络映射器（Network Mapper）的缩写，是一个用于网络发现和安全审计的开源工具。-p-: 这个选项指示Nmap扫描所有可能的端口，而不是只扫描一些常见的端口。在这里，连字符（-）表示范围，而没有具体的端口号，因此表示扫描所有1 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2024/01/08/%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E%E4%B9%8B%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E%E8%AF%A6%E8%A7%A3/" title="逻辑漏洞之支付漏洞详解">逻辑漏洞之支付漏洞详解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-08T02:19:10.000Z" title="Created 2024-01-08 10:19:10">2024-01-08</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-08T02:20:14.011Z" title="Updated 2024-01-08 10:20:14">2024-01-08</time></span></div><div class="content">一、漏洞介绍所有涉及购买、支付等方面的功能处就有可能存在支付漏洞。
-二、漏洞原理一般支付流程：
-
-用户用钱包加上优惠券&#x2F;折扣券确认购买商品的单价、数量以及购买时间，提交给平台或商家确认无误后，确认支付信息，报告购买信息。其中有三个重要的因素：用户、商品、平台&#x2F;商家。这三个因素在支付流程中都有可能造成支付漏洞。
-三、漏洞危害对企业和用户的危害极大。
-四、利用前提 目标网站有支付系统
- 在字符流程中，对于用户、商品、平台&#x2F;商家三个重要因素之间有漏洞。
-五、挖掘利用1、一般类型1.描述
-这里的一般类型主要是指在支付流程中，由三个因素之间产生的漏洞。
-2.挖掘
-寻找网站的支付系统，或兑换系统，抓包判断有没有敏感信息可以修改。
-3.利用
-
-修改支付价格
-
-在支付流程中，提交购买信息、确认支付、确认购买的流程中，如果相互之间没有做好验证机制，就有可能出现修改支付价格的漏洞。
-在这三个步骤中，可以尝试抓包，修改支付价格。
-
-修改支付状态
-
-这个问题是没有对支付状态的值跟实际订单支付状态进行校验，导致点击支付时抓包修改决定支付或未支付的参数为支付状态的值从而达到支付成功。 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2024/01/08/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" title="信息收集">信息收集</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-08T02:12:38.000Z" title="Created 2024-01-08 10:12:38">2024-01-08</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-08T02:18:15.324Z" title="Updated 2024-01-08 10:18:15">2024-01-08</time></span></div><div class="content">备案&#x2F;whois查询：网站：https://beian.miit.gov.cn/
-https://www.aizhan.com/
-可获得域名持有者的邮箱，电话号码
-
-
-搜索引擎查询：利用特殊语法来搜集敏感信息，以Google为例
-site：指定域名
-inurl：url中存在的关键字的网页
-intext：网页正文中的关键字
-filetype：指定文件类型
-intitle：网页标题中的关键字
-link：link：baidu.com即表示返回所有和baidu.com做了链接的url
-info：查找指定站点的一些基本信息
-cache：搜索google里关于某些内容的缓存
-子域名收集工具：layer子域名挖掘机
-搜索引擎：site：目标域名（不加www）
-网站：ip反查域名https://dns.aizhan.com/
-端口收集工具：namp
-Nmap命令
-Nmap接受的端口格式
-
-范例一：扫描单一端口。
-1nmap -p 22 127.0.0.1
-
-范例二：指定端口名，注意：可能会执行多端口扫描。
-1nmap -p ssh 127.0.0.1
-
-范例三：使用多端口指定选项，以逗号分开 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2024/01/08/Burp%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8%EF%BC%8COracle%E6%95%B0%E6%8D%AE%E5%BA%93%E6%B3%A8%E5%85%A5/" title="Burp的安装与使用，Oracle数据库注入">Burp的安装与使用，Oracle数据库注入</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-08T01:56:27.000Z" title="Created 2024-01-08 09:56:27">2024-01-08</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-08T02:02:22.268Z" title="Updated 2024-01-08 10:02:22">2024-01-08</time></span></div><div class="content">Burp的安装与使用安装1.下载并安装Burp抓包软件（半汉化版），官网链接：https://portswigger.net/burp2.cmd打开这个路径
-
-在命令窗口输入Java -vision确认java版本是java19再输入java -jar burp-loader-keygen-2_1_06.jar然后会弹出下面的窗口
-
-然后再双击汉化启动。
-把左边的License复制到右边，点击下一步&#x3D;&gt;手动激活
-
-过程1：把右边内容复制到左边过程2：把左边下方内容复制到右边下方点击下一个，激活成功
-
-使用1.sqli第一关，用Burp抓包。依次点击Proxy–&gt;intercept–&gt;打开内置浏览器–&gt;复制第一关的链接粘贴到内置浏览器–&gt;HTTP history–&gt;对应的数据包
-
-用Burp爆破。右击数据包–&gt;发送到repeater
-
-1-50迭代。右击数据包–&gt;发送到intruder （intruder是爆破器 ）选择1–&gt;添加
-
-点击Payloads–&gt;Payloads type选择Numbers–&gt;1 50 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2024/01/08/%E5%AE%89%E5%85%A8%E7%8B%97-waf%E7%BB%95%E8%BF%87/" title="安全狗-waf绕过">安全狗-waf绕过</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-08T01:47:50.000Z" title="Created 2024-01-08 09:47:50">2024-01-08</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-08T01:55:02.276Z" title="Updated 2024-01-08 09:55:02">2024-01-08</time></span></div><div class="content">安装安全狗
-下载地址：https://www.safedog.cn/
-关闭小皮的Apache，加入一个新的Apache到系统服务中，管理员权限打开dos命令行面板，进入phpstudy_pro\Extensions\Apache2.4.39\bin文件夹，输入以下命令
-
-1httpd.exe -k install -n apache2.4
-
-
-安装完成后打开系统服务列表查看是否安装成功
-
-3、安装安全狗
-安全前先启动Apache2.4服务，点击安全狗安装包安装，安装目录自定义
-
-
-安装完成启动安全狗可能会提示apache插件安装失败，此问题原因是安全狗启动权限不够
-
-用管理员权限启动安全狗
-
-启动后提示apache插件安装完成
-
-waf绕过以sqli-lib第一关为例
-\1. 输入?id&#x3D;1’ union select,被安全狗的过滤规则检测到了，只有有union select或者单独的select就会直接拦截。
-
-\2. 打开Yakit软件，把第一关链接192.168.2.2&#x2F;sqli&#x2F;Less&#x2F;?id&#x3D;1复制到Yakit内置浏览器， ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2024/01/08/SQL%E8%AF%AD%E5%8F%A5%E5%92%8CSQLMAP%E8%AF%AD%E5%8F%A5/" title="SQL语句和SQLMAP语句">SQL语句和SQLMAP语句</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-08T01:13:33.000Z" title="Created 2024-01-08 09:13:33">2024-01-08</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-08T01:44:12.650Z" title="Updated 2024-01-08 09:44:12">2024-01-08</time></span></div><div class="content">SQL语句和SQLMAP语句MySQL进入MySQL：进入MySQL的根目录下的bin目录(……..\MySQL5.7.26\bin)，再在上面栏中输入cmd,点击Ente进入该目录下的命令行窗口
-
-或者选择直接打开命令行窗口cd到……..\MySQL5.7.26\bin目录下
-再在该窗口中输入，
-mysql -u root -p #-u用于指定登录MySQL服务器的用户名。-p: 用于指定登录MySQL服务器的密码。
-进入root用户的登陆界面
-输入密码，直接Enter登陆，请记住MySQL密码，密码忘记了在找回密码很麻烦很麻烦！且MySQL卸载容易残留内容。
-
-后续mysql数据库需要使用到远程操控（虚拟机之类）
-解除远程限制1use mysql; # 使用mysql这个数据库
-
-1update user set Host=&#x27;%&#x27; where User=&#x27;root&#x27;; # 更新&quot;user&quot;表中&quot;User&quot;列为&#x27;root&#x27;的行，将相应行
-
-1flush privileges; #重新加 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Emo</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/12/%E5%9B%BE%E7%89%87/" title="Untitled">Untitled</a><time datetime="2024-01-12T09:12:15.650Z" title="Created 2024-01-12 17:12:15">2024-01-12</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/01/08/test-my-site/" title="test_my_site">test_my_site</a><time datetime="2024-01-08T09:48:43.000Z" title="Created 2024-01-08 17:48:43">2024-01-08</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/01/08/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/" title="Linux目录结构">Linux目录结构</a><time datetime="2024-01-08T09:09:38.000Z" title="Created 2024-01-08 17:09:38">2024-01-08</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/01/08/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" title="网络基础知识">网络基础知识</a><time datetime="2024-01-08T09:09:04.000Z" title="Created 2024-01-08 17:09:04">2024-01-08</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/01/08/box%E9%9D%B6%E6%9C%BA/" title="box靶机">box靶机</a><time datetime="2024-01-08T02:21:23.000Z" title="Created 2024-01-08 10:21:23">2024-01-08</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">January 2024</span><span class="card-archive-list-count">10</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">December 2023</span><span class="card-archive-list-count">19</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">29</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-01-12T09:23:40.352Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Emo</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+2.具体的目录结构1）&#x2F;bin  【常用】   （&#x2F;usr&#x2F;bin 、&#x2F;usr&#x2F;local&#x2F;bin）是Binary的缩小写，这个目录存放着经常使用的命令2）&#x2F;sbin  (&#x2F;usr&#x2F;sbin、&#x2F;usr&#x2F;local&#x2F;sbin）s就是Super User的意思，这里存放的是系统管理员使用的系统管理程序。3）&#x2F;home【常用】  存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一般该目录名是以用户的账号命名。4）&#x2F;root 【常用】 该目录为系统管理员，也称作超级权限者的用户主目录5）&#x2F;lib  系统开机所需要最基本的动态连接共享库，其作用类似于Windows ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Emo</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/14/vulnhub-MONEYBOX1%E5%AD%A6%E4%B9%A0/" title="vulnhub-MONEYBOX1学习">vulnhub-MONEYBOX1学习</a><time datetime="2024-01-13T16:53:12.000Z" title="Created 2024-01-14 00:53:12">2024-01-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/14/virtualbox/" title="virtualbox">virtualbox</a><time datetime="2024-01-13T16:45:54.000Z" title="Created 2024-01-14 00:45:54">2024-01-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/14/Pikachu/" title="Pikachu">Pikachu</a><time datetime="2024-01-13T16:43:11.000Z" title="Created 2024-01-14 00:43:11">2024-01-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/14/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%B9%B3%E5%8F%B0/" title="网络空间搜索引擎平台">网络空间搜索引擎平台</a><time datetime="2024-01-13T16:35:17.000Z" title="Created 2024-01-14 00:35:17">2024-01-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/14/%E9%9D%B6%E6%9C%BAtest/" title="靶机test">靶机test</a><time datetime="2024-01-13T16:28:19.000Z" title="Created 2024-01-14 00:28:19">2024-01-14</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">January 2024</span><span class="card-archive-list-count">17</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">December 2023</span><span class="card-archive-list-count">19</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">36</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-01-13T17:02:47.263Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Emo</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

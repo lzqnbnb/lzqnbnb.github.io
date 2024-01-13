@@ -51,7 +51,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-01-12 17:23:40'
+  postUpdate: '2024-01-14 01:02:47'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -148,7 +148,124 @@
         }
       }
       detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401121712730.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Emo"><span class="site-name">Emo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Emo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/10/html5/" title="html5">html5</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-10T03:28:20.000Z" title="Created 2023-12-10 11:28:20">2023-12-10</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-17T11:55:18.679Z" title="Updated 2023-12-17 19:55:18">2023-12-17</time></span></div><div class="content">HTML5基础在VS code中添加拓展，如图所示
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://raw.githubusercontent.com/lzqnbnb/lsp/main/img/202401121712730.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Emo"><span class="site-name">Emo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Emo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/24/MySQL%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" title="MySQL的基本操作">MySQL的基本操作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-24T01:59:04.000Z" title="Created 2023-12-24 09:59:04">2023-12-24</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-24T01:59:57.448Z" title="Updated 2023-12-24 09:59:57">2023-12-24</time></span></div><div class="content">MySQL的基本操作进入MySQL：进入MySQL的根目录下的bin目录(……..\MySQL5.7.26\bin)，再在上面栏中输入cmd,点击Ente进入该目录下的命令行窗口
+或者选择直接打开命令行窗口cd到……..\MySQL5.7.26\bin目录下
+再在该窗口中输入，
+12mysql -u root -p #-u用于指定登录MySQL服务器的用户名。-p: 用于指定登录MySQL服务器的密码。
+
+进入root用户的登陆界面
+输入密码，直接Enter登陆，请记住MySQL密码，密码忘记了在找回密码很麻烦很麻烦！且MySQL卸载容易残留内容。
+后续mysql数据库需要使用到远程操控（虚拟机之类）
+解除远程限制12345use mysql; # 使用mysql这个数据库update user set Host=&#x27;%&#x27; where User=&#x27;root&#x27;; # 更新&quot;user&quot;表中&quot;User&quot;列为&#x27;root&#x27;的行，将相应行												的&quot;Host&quot;列设置 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/24/yakit%E4%B8%8Epstman%E4%BD%BF%E7%94%A8%E5%AE%89%E8%A3%85/" title="yakit与pstman使用安装">yakit与pstman使用安装</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-24T01:33:32.000Z" title="Created 2023-12-24 09:33:32">2023-12-24</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-24T01:56:26.291Z" title="Updated 2023-12-24 09:56:26">2023-12-24</time></span></div><div class="content">yakit与pstman使用安装先安装谷歌浏览器
+到yakit官网下载安装包1https://www.yaklang.io/products/intro/
+
+点击左上角yak头像   下载windows版本
+
+安装后初始化引擎
+
+项目管理中选择default
+
+点击mitm
+
+免配置启动
+启动免配置chrome
+
+请输入目标地址
+
+postman的使用新建项目
+get请求的链接
+链接的获取这里使用ctfshow-web靶场进行使用
+用火狐浏览器打开
+
+火狐浏览器f12打开开发者工具
+选择网络，然后重新加载网页
+
+会出现很多get请求
+
+根据文件响应可以判断api文件请求
+
+复制消息头的get链接放到postman中
+
+send发送后可以看到有数据接受
+
+加入键名id&#x3D;1可以看到
+
+之后就可以进行相关操作了
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/17/html%E5%AF%BC%E5%85%A5vue/" title="html导入vue">html导入vue</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-17T12:44:17.000Z" title="Created 2023-12-17 20:44:17">2023-12-17</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-17T12:50:01.511Z" title="Updated 2023-12-17 20:50:01">2023-12-17</time></span></div><div class="content">html导入vue引入样式与引入组件库
+1234567&lt;!-- 引入样式 --&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/element-ui/lib/theme-chalk/index.css&quot;&gt;&lt;!-- 引入组件库 --&gt;&lt;script src=&quot;https://unpkg.com/element-ui/lib/index.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/vue@2/dist/vue.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js&quot;&gt;&lt;/script&gt;
+
+可以链接访问后复制黏贴到文件目录
+
+文件名要一样
+
+在php文件中调用
+12345&lt;link rel=& ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/17/php%E5%AD%A6%E4%B9%A0/" title="php学习">php学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-17T12:42:52.000Z" title="Created 2023-12-17 20:42:52">2023-12-17</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-17T12:43:23.214Z" title="Updated 2023-12-17 20:43:23">2023-12-17</time></span></div><div class="content">php学习phpPHP 是一种创建动态交互性站点的强有力的服务器端脚本语言
+PHP 脚本以  结束：
+1234&lt;?php// PHP 代码?&gt;
+
+PHP 文件的默认文件扩展名是 .php
+PHP 中的每个代码行都必须以分号结束。分号是一种分隔符，用于把指令集区分开来。
+通过 PHP，有两种在浏览器输出文本的基础指令：echo 和 print。
+PHP 变量与代数类似，可以给 PHP 变量赋予某个值（x&#x3D;5）或者表达式（z&#x3D;x+y）。
+变量可以是很短的名称（如 x 和 y）或者更具描述性的名称（如 age、carname、totalvolume）。
+PHP 变量规则：
+
+变量以 $ 符号开始，后面跟着变量的名称
+变量名必须以字母或者下划线字符开始
+变量名只能包含字母、数字以及下划线（A-z、0-9 和 _ ）
+变量名不能包含空格
+变量名是区分大小写的（$y 和 $Y 是两个不同的变量）
+
+echo 和 print
+echo - 可以输出一个或多个字符串
+print - 只允许输出一个字符串，返回值总为 1
+echo 输出的速度比 print 快， echo ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/17/Vue%E4%B8%8Epostman%E4%B8%8Enavicat%E5%AE%89%E8%A3%85/" title="Vue与postman与navicat安装">Vue与postman与navicat安装</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-17T11:56:55.000Z" title="Created 2023-12-17 19:56:55">2023-12-17</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-17T12:41:45.677Z" title="Updated 2023-12-17 20:41:45">2023-12-17</time></span></div><div class="content">Vue与postman与navicat安装Vue3安装在用 Vue.js 构建大型应用时推荐使用 cnpm 安装，cnpm 能很好地和 Webpack 或 Browserify 模块打包器配合使用，然后在命令行中运行以下命令：
+1npm create vue@latest
+
+这一指令将会安装并执行 create-vue
+
+如果不确定是否要开启某个功能，你可以直接按下回车键选择 否
+
+在项目被创建后，通过以下步骤安装依赖并启动开发服务器
+123cd vue-projectnpm installnpm run dev
+
+
+成功执行以上命令后访问 **http://localhost:5173/**，输出结果如下所示：
+
+终端输入
+123npm install element-plus -savenpm install -D unplugin-vue-components unplugin-auto-import
+
+
+饿了么网页链接
+12https://element-plus.org/zh-CN/guide/design.html
+
+
+Vue3项目的典型目录结构：
+123456789101 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/17/WireShark%E7%9A%84%E4%BD%BF%E7%94%A8/" title="WireShark的使用">WireShark的使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-17T11:39:56.000Z" title="Created 2023-12-17 19:39:56">2023-12-17</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-17T11:53:30.376Z" title="Updated 2023-12-17 19:53:30">2023-12-17</time></span></div><div class="content">WireShark的使用一丶WireShark的使用网络分析工具WireShark的使用WireShark是非常流行的网络封包分析工具，可以截取各种网络数据包，并显示数据包详细信息。常用于开发测试过程中各种问题定位
+WireShark软件安装软件下载路径：wireshark官网。按照系统版本选择下载
+
+管理员身份运行
+
+选择对应的网卡，右键，会出现Start Capture(开始捕获)，点击即可进行捕获该网络信息，开始抓取网络包
+
+执行需要抓包的操作，如ping www.baidu.com。
+
+操作完成后相关数据包就抓取到了。为避免其他无用的数据包影响分析，可以通过在过滤栏设置过滤条件进行数据包列表过滤
+ping操作属于icmp
+
+wireshark抓包完成
+</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/10/proxifier%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/" title="proxifier软件的使用">proxifier软件的使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-10T03:53:17.000Z" title="Created 2023-12-10 11:53:17">2023-12-10</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-10T03:57:37.629Z" title="Updated 2023-12-10 11:57:37">2023-12-10</time></span></div><div class="content">proxifier软件的使用下载proxifier压缩文件，打开猫的局域网连接，打开proxifier,点击配置文件
+
+点击编辑，如图设置，点击确定（ssh*;表示打开所有ssh开头的文件
+
+移除第一行，将default改为direct放行
+
+重启proxifier，win+r，输入cmd，在命令行中输入ssh root@1.1.1.1，会在proxifier出现记录（大概率访问失败）
+
+说明(1) Frame: 物理层的数据顿概况(2) Ethernet ll:数据链路层以太网顿头部信息(3) Internet Protocol Version 4: 互联网层IP包头部信息(4) Transmission Control Protocol: 传输层T的数据段头部信息，此外是TCP(5) Hypertext Transfer Protocol: 应用层的信息，此外是HTTP协议
+协议过滤比较简单，直接在Filter框中直接输入协议名即可。注意: 协议名称需要输入小写tcp，只显示TCP协议的数据包列表http，只查看HTTP协议的数据包列表icmp，只显示ICMP协议的数据包列表
+ i ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/10/html5/" title="html5">html5</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-10T03:28:20.000Z" title="Created 2023-12-10 11:28:20">2023-12-10</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-17T11:55:18.679Z" title="Updated 2023-12-17 19:55:18">2023-12-17</time></span></div><div class="content">HTML5基础在VS code中添加拓展，如图所示
 创建一个html文件以便于对html有一个简单的认识
 进入输入指令”!+TAB”则会自动输出基本的框架
 HTML的基本语法：123456789101112131415161718192021222324252627html&lt;b&gt;:加粗&lt;/b&gt;&lt;i&gt;:斜体&lt;/i&gt;&lt;sup&gt;上标&lt;/sup&gt;    &lt;br /&gt;   &lt;!----换行--&gt;    &lt;b&gt;:加粗&lt;/b&gt;    &lt;sub&gt;下标&lt;/sub&gt;    &lt;hr /&gt;&lt;!----分割线--&gt;    &lt;strong&gt;加粗&lt;/strong&gt;&lt;!----注释--&gt;    &lt;em&gt;斜体&lt;/em&gt;    &lt;h1&gt;最大标题&lt;/h1&gt;    &lt;h6&gt;最小标题&lt;/h6&gt;    &lt;s&gt;文字中划线&lt;/s&gt;     ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/07/ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E9%99%86Linux/" title="ssh远程登陆Linux">ssh远程登陆Linux</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-07T01:45:58.000Z" title="Created 2023-12-07 09:45:58">2023-12-07</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-07T01:52:03.108Z" title="Updated 2023-12-07 09:52:03">2023-12-07</time></span></div><div class="content">ssh远程登陆Linux打开Linux系统输入
@@ -196,161 +313,4 @@ typora-偏好设置
 在 PicGo 中安装 lankong 1.1.3
 
 
-利用  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/05/python%E5%AE%89%E8%A3%85/" title="python安装">python安装</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-05T13:42:14.000Z" title="Created 2023-12-05 21:42:14">2023-12-05</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-05T13:55:56.930Z" title="Updated 2023-12-05 21:55:56">2023-12-05</time></span></div><div class="content">python安装进入python官网下载python（需要和电脑版本一致的版本，右键计算机-属性查看）
-
-安装python
-
-打开安装包，勾选add python 3.8 to PATH,点击Customize installation进入下一页
-全选，点击next
-勾选add python to environmnet variables,选择安装路径（默认c盘）,点击install
-
-测试python是否能调用
-
-在python文件夹下，输入cmd
-进入命令行，输入python
-出现以下界面则安装成功
-
-
-</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/05/python-study/" title="python_study">python_study</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-05T13:09:24.000Z" title="Created 2023-12-05 21:09:24">2023-12-05</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-05T13:39:34.466Z" title="Updated 2023-12-05 21:39:34">2023-12-05</time></span></div><div class="content">
-python_study第一章一、变量
-变量：可以发生改变的一个量，变量是用来区分不同数据的，可以指向一个内存空间，帮我们储存一些数据
-变量的命名规范
-
-
-
-必须是数字或字母或下划线组成
-
-不能数字开头，也不能是纯数字
-
-不要能用python的关键字
-
-不能用中文
-
-不要太长
-
-要有意义
-
-推荐使用下划线命名或驼峰命名
-name_of_teacher = &quot;樵夫&quot;
-NameOfTeacher = &quot;樵夫&quot;
-
-二、常量
-
-print(123)
-
-可以把所有变量的字母变成大写就可以认为是常量
-不存在绝对意义上的常量
-
-三、数据类型
-数据类型：区分不同的数据，不同数据类型应该有不同的操作
-
-数字: +-*
-整数：int
-小数：float
-
-文字： 展示
-字符串：str(****)
-表示方式：&#39;***&#39; ,&quot;****&quot;,&#39;&#39;&#39;***&#39;&#39;&#39; (英文状态下)
-操作：
-
-+  左右两端必须是字符串，表示字符串两端连接操作
-
-*  一个字符串只能乘以一个数字，表示字符串重复的次 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/04/%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA/" title="远程控制安卓手机">远程控制安卓手机</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-04T07:07:03.000Z" title="Created 2023-12-04 15:07:03">2023-12-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-04T11:43:03.666Z" title="Updated 2023-12-04 19:43:03">2023-12-04</time></span></div><div class="content">1利用脚本控制安卓手机
-
-2点击PAK Builder
-
-3成功会出现生成的akp安装包
-
-4将这个APk移到安卓机上
-
-5点击打开
-
-6远程控制面板将出现Open The  lab   鼠标点击
-
-7可以控制手机了
-如果在第2不生成不了需要去下载JAVA8
-
-打开Everythin  没有就去下一个，找到上面蓝色框的这个复制途径
-
-打开电脑系统管理 点下面的环境边量
-
-点击Path，然后将刚刚复制的路径粘贴在上面红框中就可以生成AKP了
-  如果还是生成不了就去把Windows中心的病毒实时保护和篡改防护关闭
-
-</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/02/%E5%88%A9%E7%94%A8github%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/" title="利用github搭建hexo博客">利用github搭建hexo博客</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-02T15:02:14.000Z" title="Created 2023-12-02 23:02:14">2023-12-02</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-03T03:53:50.270Z" title="Updated 2023-12-03 11:53:50">2023-12-03</time></span></div><div class="content">利用github搭建hexo博客准备前提
-提前安装好(node.js)[https://nodejs.org/en] 左边的那个
-提前安装好(GIt)[https://git-scm.com/downloads]
-提前注册好一个github账号
-如果文章图片没有显示，请自行挂代理
-
-操作步骤
-在本地找个目录放博客源文件，路径不要有中文
-在选定的目录中，右键Git Bash Here
-使用npm命令安装Hexo，输入：
-
-npm install -g hexo-clihexo init blogcd bloghexo g 
-构建好的效果:
-
-d进入这个目录为了检测我们的网站雏形，分别按顺序输入以下三条命令：
-12345hexo new test_my_sitehexo ghexo s之后就可以访问127.0.0.1:4000访问blog了复制代码
-
-配置ssh
-
-cd ~&#x2F;.ssh #检查本机已存在的ssh密钥
-
-
-如果提示：No such file or directory 说明你是第一次使用git。
-
-
-ssh-keygen -t rsa -C “邮件地址”
-
-
-然后连续3 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/02/%E5%88%A9%E7%94%A8%E7%BD%91%E9%A1%B5%E4%BC%A0%E6%92%AD%E6%9C%A8%E9%A9%AC/" title="利用网页传播木马">利用网页传播木马</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-02T14:56:03.000Z" title="Created 2023-12-02 22:56:03">2023-12-02</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-02T15:01:20.000Z" title="Updated 2023-12-02 23:01:20">2023-12-02</time></span></div><div class="content">在虚拟机下载phpstudy软件
-
-点击启动
-
-先点击网站，在点管理 ，在点打开根目录
-
-先把目录里面的东西全部删除
-然后创建index.html文件
-再打开vscode,创造html的模板，输入
-hello world
-
-
-导入flash.js文件，在文件代码最下方代码 “href&#x3D;”
-地址改成自己虚拟机的地址加上点击后要下载文件的名称
-这里是 href&#x3D;’192.168.42.130&#x2F;flash.exe’ :从192.168.42.130访问，跳出flash.exe下载
-
-把这里改成虚拟机的IP
-进入网站后弹出flash木马，点击即下载flash.exe
-压缩包携带木马文件以flash下载为例
-将flash安装包和木马一起进行压缩，勾选创建自解压格式压缩文件
-
-点击创建自解压格式选项
-再点高级
-
-输入计算机的目录 C:\windows\temp 
-
-输入C:\windows\temp\flashcenter_pp_ax_install_cn.exe
-C:\windows\temp\flash.exe 
-
-给木马文件换图标先下载Restorator
-把想 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/02/%E5%88%B6%E4%BD%9C%E9%92%93%E9%B1%BC%E7%BD%91%E7%AB%99/" title="制作钓鱼网站">制作钓鱼网站</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-02T14:51:41.000Z" title="Created 2023-12-02 22:51:41">2023-12-02</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-07T01:42:59.725Z" title="Updated 2023-12-07 09:42:59">2023-12-07</time></span></div><div class="content">制作钓鱼网站
-
-打开猫点击ALLOW lAN
-打开虚拟机vmx后缀 登入 root  123456
-ocks4改为socks5 ＋ clash上的代理地址和端口 按esc  x +回车
-proxychains4 git clone https://github.com/makdosx/mip22 利用网站下载文件
-cd mip22 进入mip22目录
-chmod +x &#x2F;* 将目录的所有文件拥有可执行权限
-proxychains4 -q bash .&#x2F;mip22.sh 执行mip22
-进入mip22界面 按1进入 钓鱼网站界面 选择钓鱼网站 按3 开始收集信息等待复制 URL http(s)的链接
-获取status_code
-import requests
-url &#x3D; “https://httpbin.org/get
-r &#x3D; requests.get(url)
-print(r.status_code)
-下载 VS Code Insiders
-扩展chinese（Simplified)
-​       Code Runner
-​        Ta ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Emo</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/12/%E5%9B%BE%E7%89%87/" title="Untitled">Untitled</a><time datetime="2024-01-12T09:12:15.650Z" title="Created 2024-01-12 17:12:15">2024-01-12</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/01/08/test-my-site/" title="test_my_site">test_my_site</a><time datetime="2024-01-08T09:48:43.000Z" title="Created 2024-01-08 17:48:43">2024-01-08</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/01/08/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/" title="Linux目录结构">Linux目录结构</a><time datetime="2024-01-08T09:09:38.000Z" title="Created 2024-01-08 17:09:38">2024-01-08</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/01/08/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" title="网络基础知识">网络基础知识</a><time datetime="2024-01-08T09:09:04.000Z" title="Created 2024-01-08 17:09:04">2024-01-08</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/01/08/box%E9%9D%B6%E6%9C%BA/" title="box靶机">box靶机</a><time datetime="2024-01-08T02:21:23.000Z" title="Created 2024-01-08 10:21:23">2024-01-08</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">January 2024</span><span class="card-archive-list-count">10</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">December 2023</span><span class="card-archive-list-count">19</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">29</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-01-12T09:23:40.352Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Emo</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+利用  ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Emo</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/14/vulnhub-MONEYBOX1%E5%AD%A6%E4%B9%A0/" title="vulnhub-MONEYBOX1学习">vulnhub-MONEYBOX1学习</a><time datetime="2024-01-13T16:53:12.000Z" title="Created 2024-01-14 00:53:12">2024-01-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/14/virtualbox/" title="virtualbox">virtualbox</a><time datetime="2024-01-13T16:45:54.000Z" title="Created 2024-01-14 00:45:54">2024-01-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/14/Pikachu/" title="Pikachu">Pikachu</a><time datetime="2024-01-13T16:43:11.000Z" title="Created 2024-01-14 00:43:11">2024-01-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/14/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%B9%B3%E5%8F%B0/" title="网络空间搜索引擎平台">网络空间搜索引擎平台</a><time datetime="2024-01-13T16:35:17.000Z" title="Created 2024-01-14 00:35:17">2024-01-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/14/%E9%9D%B6%E6%9C%BAtest/" title="靶机test">靶机test</a><time datetime="2024-01-13T16:28:19.000Z" title="Created 2024-01-14 00:28:19">2024-01-14</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">January 2024</span><span class="card-archive-list-count">17</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">December 2023</span><span class="card-archive-list-count">19</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">36</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-01-13T17:02:47.263Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Emo</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
